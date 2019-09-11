@@ -1,0 +1,50 @@
+spring:
+  thymeleaf:
+    cache: false
+  devtools:    restart:      additional-exclude: fileadress/**  #额外排除需要重启的目录
+  #引入RabbitMQ基本的配置信息    
+ # rabbitmq: #   host: 49.234.219.75
+  #  port: 5672
+  #  username: admin
+  #  password: admin
+  #  publisher-confirms: true #  消息发送到交换机确认机制,是否确认回调
+#mysql数据连接
+  datasource:    #url: jdbc:mysql://10.203.12.190:3306/opsdevelop?
+    #添加中文字符集
+    url: jdbc:mysql://49.234.219.75/myblogs?useUnicode=true&characterEncoding=utf-8
+    #username: opsdb
+    username: root
+    #password: sf123456
+    password: Root1234%
+  redis:
+# Redis服务器地址
+     host: 49.234.219.75
+     port: 6379 
+     password: redis1234
+#mybatis 配置
+# 配置映射文件加载   
+mybatis:  mapper-locations:  - classpath*:mapper/*.xml
+  configuration: #控制台打印sql    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    
+# 设置单个文件最大内存 /设置所有文件最大内存
+multipart:
+  maxFileSize: 50Mb
+  maxRequestSize: 50Mb 
+# 自定义文件上传路径
+web:
+  uploadImgPath: fileadress/file  #图片传输地址(目前文件图片放一个位置)
+ 
+
+logging:
+  level:
+    xatu.zsl: debug #不同目录下的日志可配置不同级别
+    org.springfromework.web: info
+    org.hibernate: error
+  file: log/server.log  
+
+
+ 
+  
+  
+  
+  

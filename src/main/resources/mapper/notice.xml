@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.NoticeMapper">
+ <resultMap id="BaseResultMap" type="com.example.demo.entity.Notice">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="stype" jdbcType="BIGINT" property="stype" />
+    <result column="details" jdbcType="VARCHAR" property="details" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+  </resultMap>
+  <!-- 根据类型获取 -->
+ 	<select id="selectNoticeByType"  resultMap="BaseResultMap" parameterType="java.lang.Integer">
+ 		SELECT id, stype, details, title FROM notice where notice.stype =#{stype};
+ 	</select>
+ 	<!-- 查询全部 -->
+ 	<select id="selectaAllNotice"  resultMap="BaseResultMap">
+ 		SELECT id, stype, details, title FROM notice;
+ 	</select>
+ 	
+       
+</mapper>

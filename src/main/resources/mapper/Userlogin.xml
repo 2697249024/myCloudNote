@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.LoginMapper">
+ <resultMap id="UserResultMap" type="com.example.demo.entity.User">
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="role" jdbcType="INTEGER" property="role" />
+    <result column="pass_word" jdbcType="VARCHAR" property="passWord" />
+  </resultMap>
+ 	<select id="selectAllUser"  resultMap="UserResultMap" >
+ 		SELECT user_id,user_name,phone,email,status,role,pass_word FROM user
+ 	</select>
+ 	<!-- 修改用户登录状态 -->
+    <update id="updateUserStatus">
+    	UPDATE user set status = #{status} where user_name = #{user_name}
+    </update>   
+    <!-- 查看用户登录状态 -->   
+    <select id="selectUserStatusByUname" resultType="java.lang.Integer">
+    	SELECT status FROM user where user_name = #{user_name}
+    </select>   
+       
+</mapper>

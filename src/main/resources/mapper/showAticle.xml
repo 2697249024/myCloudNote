@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.ShowArticleMapper">
+ <resultMap id="ShowArticleMap" type="com.example.demo.entity.pojo.ShowArticle">
+ 	<result column="id"  property="id" />
+    <result column="articleTitle"  property="articleTitle" />
+    <result column="userName"  property="userName" />
+    <result column="articleCreateDate" property="articleCreateDate" />
+    <result column="tag1"  property="tag1" />
+    <result column="tag2"  property="tag2" />
+    <result column="tag3"  property="tag3" />
+    <result column="articleIntro"  property="articleIntro" />
+    <result column="articlePicture" property="articlePicture" />
+    <result column="detial" property="detial" />
+  </resultMap>
+  <!-- 根据日期获取前五条数据 -->
+ 	<select id="selectIndexArtilce" parameterType="java.lang.String"  resultMap="ShowArticleMap">
+ 		select ar.id,ar.article_title articleTitle,us.user_name userName,
+ 		ar.article_create_date articleCreateDate,ta.tag1,ta.tag2,ta.tag3,
+ 		ar.article_intro articleIntro,ar.article_picture articlePicture,co.detial detial
+		from article ar INNER JOIN content co 
+		on ar.article_content_id=co.content_id 
+		INNER JOIN user us on ar.posted_id = us.user_id 
+		INNER JOIN tag ta on ar.article_tag_id = ta.tag_id
+		<if test="id != null and id != ''">
+			and ar.id=#{id}
+		</if>
+		ORDER BY ar.article_create_date desc LIMIT 5
+ 	</select>
+ 	
+ 	<!-- 笔记分页查询 -->
+ 	<select id="selecArtilceByPageHelper" parameterType="java.lang.Integer" resultMap="ShowArticleMap">
+	 	select ar.id, ar.article_title articleTitle,us.user_name userName,ar.article_create_date articleCreateDate,ta.tag1,ta.tag2,ta.tag3,ar.article_intro articleIntro,ar.article_picture articlePicture,co.detial detial
+		from article ar INNER JOIN content co 
+		on ar.article_content_id=co.content_id 
+		INNER JOIN user us on ar.posted_id = us.user_id 
+		INNER JOIN tag ta on ar.article_tag_id = ta.tag_id
+		ORDER BY ar.article_create_date desc LIMIT #{currentPage},#{pageSize}
+ 	</select>
+ 	
+ 	<!-- 统计笔记总数 -->
+ 	<select id="selectCountArticle" resultType="java.lang.Integer">
+ 		SELECT count(id)  FROM article
+ 	</select>
+ 	
+   <resultMap id="selectArticleTitleMap" type="com.example.demo.entity.pojo.ArticleTitle">
+ 	<result column="id"  property="id" />
+    <result column="article_title"  property="articleTitle" />
+  </resultMap>
+ 	<!-- 根据日期排序查询前12条文章标题  -->
+ 	<select id ="selectArticleTitle"  resultMap="selectArticleTitleMap">
+ 		select id,article_title from article ORDER BY article_create_date desc LIMIT 12
+ 	</select>
+ 	
+ 	<!-- 插入文章内容 -->
+ 	
+ 	<insert id="insertArticle" parameterType="com.example.demo.entity.pojo.ArticleInsertPojo">
+ 	insert into article (id,article_title,article_content_id,posted_id,article_create_date,article_tag_id,article_intro,article_picture)
+ 	VALUES (#{id},#{articleTitle},#{articleContentId},#{postedId},#{articleCreateDate},#{articleTagId},#{articleIntro},#{articlePicture});
+ 	</insert>
+ 	
+ 	<!-- 插入标签内容 -->
+ 	<insert id="insertTag" parameterType="com.example.demo.entity.Tag">
+ 		insert into tag (tag_id,tag1,tag2,tag3)VALUES(#{tagId},#{tag1},#{tag2},#{tag3});
+ 	</insert>
+ 	
+ 	<!-- 插入详情表 -->
+ 	<insert id="insertContent" parameterType="com.example.demo.entity.Content">
+ 		insert into content (content_id,detial)VALUES(#{contentId},#{detial});
+ 	</insert>
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+       
+</mapper>
