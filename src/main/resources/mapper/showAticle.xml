@@ -29,18 +29,45 @@
  	</select>
  	
  	<!-- 笔记分页查询 -->
- 	<select id="selecArtilceByPageHelper" parameterType="java.lang.Integer" resultMap="ShowArticleMap">
+ <!-- 	<select id="selecArtilceByPageHelper" parameterType="java.lang.Integer" resultMap="ShowArticleMap">
 	 	select ar.id, ar.article_title articleTitle,us.user_name userName,ar.article_create_date articleCreateDate,ta.tag1,ta.tag2,ta.tag3,ar.article_intro articleIntro,ar.article_picture articlePicture,co.detial detial
 		from article ar INNER JOIN content co 
 		on ar.article_content_id=co.content_id 
 		INNER JOIN user us on ar.posted_id = us.user_id 
 		INNER JOIN tag ta on ar.article_tag_id = ta.tag_id
 		ORDER BY ar.article_create_date desc LIMIT #{currentPage},#{pageSize}
+ 	</select> -->
+ 	
+ 	<!-- 笔记分页查询 -->
+ 	<select id="selecArtilceByPageHelper" parameterType="com.example.demo.entity.ArticlePageHelperParam" resultMap="ShowArticleMap">
+	 	select * from
+		(select ar.id, ar.article_title articleTitle,us.user_name userName,ar.article_create_date articleCreateDate,ta.tag1,ta.tag2,ta.tag3,ar.article_intro articleIntro,ar.article_picture articlePicture,co.detial detial
+		from article ar INNER JOIN content co 
+		on ar.article_content_id=co.content_id 
+		INNER JOIN user us on ar.posted_id = us.user_id 
+		INNER JOIN tag ta on ar.article_tag_id = ta.tag_id
+		ORDER BY ar.article_create_date desc ) tg
+		<if test="tags!=null">
+		where tg.tag1 like CONCAT(#{tags},'%') or tg.tag2 like  CONCAT(#{tags},'%') or tg.tag3 like CONCAT(#{tags},'%') 
+		</if>
+		LIMIT #{currentPage},#{pageSize}
  	</select>
  	
+ 	
+ 	
+ 	
  	<!-- 统计笔记总数 -->
- 	<select id="selectCountArticle" resultType="java.lang.Integer">
- 		SELECT count(id)  FROM article
+ 	<select id="selectCountArticle" parameterType="java.lang.String" resultType="java.lang.Integer">
+ 		select count(id)  from
+		(select ar.id, ar.article_title articleTitle,us.user_name userName,ar.article_create_date articleCreateDate,ta.tag1,ta.tag2,ta.tag3,ar.article_intro articleIntro,ar.article_picture articlePicture,co.detial detial
+		from article ar INNER JOIN content co 
+		on ar.article_content_id=co.content_id 
+		INNER JOIN user us on ar.posted_id = us.user_id 
+		INNER JOIN tag ta on ar.article_tag_id = ta.tag_id
+		ORDER BY ar.article_create_date desc ) tg
+		<if test="tags != null">
+		where tg.tag1 like CONCAT(#{tags},'%') or tg.tag2 like CONCAT(#{tags},'%') or tg.tag3 like CONCAT(#{tags},'%')
+		</if>
  	</select>
  	
    <resultMap id="selectArticleTitleMap" type="com.example.demo.entity.pojo.ArticleTitle">

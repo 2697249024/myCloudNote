@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
+import com.example.demo.entity.ArticlePageHelperParam;
 import com.example.demo.entity.Content;
 import com.example.demo.entity.Tag;
 import com.example.demo.entity.pojo.ArticleInsertPojo;
@@ -25,12 +26,12 @@ public interface IndexArticleService {
 	/**
 	 * 文章分页查询
 	 */
-	List<ShowArticle> selecArtilceByPageHelper(@Param("currentPage") Integer currentPage,@Param("pageSize") Integer pageSize);
+	List<ShowArticle> selecArtilceByPageHelper(ArticlePageHelperParam articlePageHelperParam);
 	/**
 	 * 统计笔记总数
 	 * @return 总笔记数
 	 */
-	Integer selectCountArticle();
+	Integer selectCountArticle(String tags);
 	/***
 	 *  根据日期排序查询前12条文章标题
 	 */

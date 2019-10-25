@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.List;
 
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.example.demo.entity.ArticlePageHelperParam;
 import com.example.demo.entity.pojo.ArticleInsertPojo;
 import com.example.demo.entity.pojo.ArticleTitle;
 import com.example.demo.entity.pojo.ShowArticle;
@@ -80,12 +82,22 @@ public class articleController {
 	 */
 	@CrossOrigin
 	@RequestMapping(value = "/selecArtilceByPageHelper",method = RequestMethod.POST)
-	public ResponseDTO<PageHelper<ShowArticle>> selecArtilceByPageHelper(Integer currentPage,Integer pageSize ){
+	public ResponseDTO<PageHelper<ShowArticle>> selecArtilceByPageHelper(Integer currentPage,Integer pageSize,String tags){
 		//currentPage-1 即为当前传入数据库的当前页
 		currentPage =currentPage-1;
-		List<ShowArticle> selecArtilceByPageHelper = indexArticleService.selecArtilceByPageHelper(currentPage, pageSize);
+		try {
+			tags = java.net.URLDecoder.decode(tags, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ArticlePageHelperParam articlePageHelperParam = new ArticlePageHelperParam();
+		articlePageHelperParam.setCurrentPage(currentPage);
+		articlePageHelperParam.setPageSize(pageSize);
+		articlePageHelperParam.setTags(tags);
+		List<ShowArticle> selecArtilceByPageHelper = indexArticleService.selecArtilceByPageHelper(articlePageHelperParam);
 		//获取笔记总数
-		Integer selectCountArticle = indexArticleService.selectCountArticle();
+		Integer selectCountArticle = indexArticleService.selectCountArticle(tags);
 		//放入pageHelper 中
 		PageHelper pageHelper = new PageHelper<ShowArticle>(currentPage, pageSize, selectCountArticle, selecArtilceByPageHelper);
 		if(selecArtilceByPageHelper.isEmpty()) {
@@ -100,9 +112,14 @@ public class articleController {
 	 */
 	@CrossOrigin
 	@RequestMapping(value = "/selectCountArticle",method = RequestMethod.POST)
-	public ResponseDTO<Integer> selectCountArticle(){
+	public ResponseDTO<Integer> selectCountArticle(String tags){
 		//currentPage-1 即为当前传入数据库的当前页
-		Integer selectCountArticle = indexArticleService.selectCountArticle();
+		try {
+			tags = java.net.URLDecoder.decode(tags, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		Integer selectCountArticle = indexArticleService.selectCountArticle(tags);
 		return ResponseDTO.buildSuccess(selectCountArticle);
 	}
 	

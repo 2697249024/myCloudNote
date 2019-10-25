@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.dao.ShowArticleMapper;
+import com.example.demo.entity.ArticlePageHelperParam;
 import com.example.demo.entity.Content;
 import com.example.demo.entity.Tag;
 import com.example.demo.entity.pojo.ArticleInsertPojo;
@@ -54,10 +55,10 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 	 * 文章分页查询
 	 */
 	@Override
-	public List<ShowArticle> selecArtilceByPageHelper(Integer currentPage, Integer pageSize) {
+	public List<ShowArticle> selecArtilceByPageHelper(ArticlePageHelperParam articlePageHelperParam) {
 		// TODO Auto-generated method stub
 		try {
-			List<ShowArticle> selecArtilceByPageHelper = showArticleMapper.selecArtilceByPageHelper(currentPage, pageSize);
+			List<ShowArticle> selecArtilceByPageHelper = showArticleMapper.selecArtilceByPageHelper(articlePageHelperParam);
 			log.info("文章分页查询成功");
 			return selecArtilceByPageHelper;
 		} catch (Exception e) {
@@ -71,9 +72,9 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 	 * @return 总笔记数
 	 */
 	@Override
-	public Integer selectCountArticle() {
+	public Integer selectCountArticle(String tags) {
 		// TODO Auto-generated method stub
-		Integer selectCountArticle = showArticleMapper.selectCountArticle();
+		Integer selectCountArticle = showArticleMapper.selectCountArticle(tags);
 		return selectCountArticle;
 	}
 	

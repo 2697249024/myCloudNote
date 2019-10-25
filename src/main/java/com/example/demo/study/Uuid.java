@@ -1,5 +1,6 @@
 package com.example.demo.study;
-import java.util.UUID;  
+import java.util.UUID;
+import java.util.function.Predicate;  
 
 public class Uuid {  
     public static void main(String[] args) {  
@@ -8,6 +9,8 @@ public class Uuid {
             String uuid = UUID.randomUUID().toString().replaceAll("-","");  
             System.out.println(uuid);  
 //            System.out.println(uuid.length());  
+            
+            
         }  
     }  
 }  
