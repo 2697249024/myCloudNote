@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.dao.LoginMapper">
- <resultMap id="UserResultMap" type="com.example.demo.entity.User">
+<mapper namespace="com.lyy.note.dao.LoginMapper">
+ <resultMap id="UserResultMap" type="com.lyy.note.entity.User">
     <result column="user_id" jdbcType="INTEGER" property="userId" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />

@@ -1,17 +1,240 @@
-2019-10-05 16:25:25.904  INFO 10368 --- [main] com.example.demo.Demo1ApplicationTests   : Starting Demo1ApplicationTests on SF0080004198A with PID 10368 (started by 80004198 in D:\work\SpringToolSuiteWorkSpace\myCloud)
-2019-10-05 16:25:25.959  INFO 10368 --- [main] com.example.demo.Demo1ApplicationTests   : No active profile set, falling back to default profiles: default
-2019-10-05 16:25:27.477  INFO 10368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-10-05 16:25:27.482  INFO 10368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-10-05 16:25:27.529  INFO 10368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
-2019-10-05 16:25:28.003  INFO 10368 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1de98962] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-10-05 16:25:30.143  INFO 10368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-05 16:25:30.913  INFO 10368 --- [main] com.example.demo.Demo1ApplicationTests   : Started Demo1ApplicationTests in 5.463 seconds (JVM running for 7.353)
-2019-10-05 16:26:02.829  INFO 10368 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-05 16:27:06.482  INFO 9448 --- [main] com.example.demo.Demo1ApplicationTests   : Starting Demo1ApplicationTests on SF0080004198A with PID 9448 (started by 80004198 in D:\work\SpringToolSuiteWorkSpace\myCloud)
-2019-10-05 16:27:06.483  INFO 9448 --- [main] com.example.demo.Demo1ApplicationTests   : No active profile set, falling back to default profiles: default
-2019-10-05 16:27:07.570  INFO 9448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-10-05 16:27:07.574  INFO 9448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-10-05 16:27:07.615  INFO 9448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
-2019-10-05 16:27:08.136  INFO 9448 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8592ad33] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-10-05 16:27:10.085  INFO 9448 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-05 16:27:10.961  INFO 9448 --- [main] com.example.demo.Demo1ApplicationTests   : Started Demo1ApplicationTests in 4.92 seconds (JVM running for 6.531)
+2019-10-28 17:02:17.912  INFO 14976 --- [http-nio-8080-exec-9] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 17:02:27.033  INFO 14976 --- [http-nio-8080-exec-3] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 17:02:32.310  INFO 14976 --- [http-nio-8080-exec-6] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 17:02:36.329  INFO 14976 --- [http-nio-8080-exec-2] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:27:59.895  INFO 14976 --- [http-nio-8080-exec-2] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:27:59.931  INFO 14976 --- [http-nio-8080-exec-2] c.l.note.service.impl.NoticeServiceImpl  : -->selectaAllNotice redis数据为空重新查询数据库
+2019-10-28 18:28:04.406  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:28:06.083  INFO 14976 --- [http-nio-8080-exec-4] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:28:16.410  INFO 14976 --- [http-nio-8080-exec-10] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:29:12.305  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:29:16.417  INFO 14976 --- [http-nio-8080-exec-8] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:29:21.194  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:31:11.741  INFO 14976 --- [http-nio-8080-exec-4] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:
+2019-10-28 18:31:14.060  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:31:16.686  INFO 14976 --- [http-nio-8080-exec-9] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:31:17.589  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:31:18.577  INFO 14976 --- [http-nio-8080-exec-1] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:31:40.473  INFO 14976 --- [http-nio-8080-exec-10] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:31:44.507  INFO 14976 --- [http-nio-8080-exec-4] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:31:47.748  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:31:50.411  INFO 14976 --- [http-nio-8080-exec-3] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:31:52.566  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:31:54.565  INFO 14976 --- [http-nio-8080-exec-9] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:01.639  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:06.536  INFO 14976 --- [http-nio-8080-exec-6] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:08.920  INFO 14976 --- [http-nio-8080-exec-10] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:12.763  INFO 14976 --- [http-nio-8080-exec-4] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:15.747  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:17.346  INFO 14976 --- [http-nio-8080-exec-3] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:19.332  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:20.636  INFO 14976 --- [http-nio-8080-exec-9] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:21.765  INFO 14976 --- [http-nio-8080-exec-1] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:27.472  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:29.874  INFO 14976 --- [http-nio-8080-exec-6] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:33.079  INFO 14976 --- [http-nio-8080-exec-10] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:32:36.442  INFO 14976 --- [http-nio-8080-exec-8] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:33:00.580  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:33:03.811  INFO 14976 --- [http-nio-8080-exec-10] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:33:08.910  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:33:11.890  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:33:15.887  INFO 14976 --- [http-nio-8080-exec-3] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:33:21.442  INFO 14976 --- [http-nio-8080-exec-1] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:33:33.936  INFO 14976 --- [http-nio-8080-exec-6] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:33:36.942  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:33:53.119  INFO 14976 --- [http-nio-8080-exec-10] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:33:59.634  INFO 14976 --- [http-nio-8080-exec-4] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:05.878  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:08.574  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:16.968  INFO 14976 --- [http-nio-8080-exec-3] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:27.325  INFO 14976 --- [http-nio-8080-exec-6] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:32.373  INFO 14976 --- [http-nio-8080-exec-8] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:35.466  INFO 14976 --- [http-nio-8080-exec-10] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:37.578  INFO 14976 --- [http-nio-8080-exec-4] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:38.875  INFO 14976 --- [http-nio-8080-exec-9] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:40.064  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:40.958  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:41.658  INFO 14976 --- [http-nio-8080-exec-1] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:43.685  INFO 14976 --- [http-nio-8080-exec-3] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:45.041  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:34:47.271  INFO 14976 --- [http-nio-8080-exec-6] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:07.065  INFO 14976 --- [http-nio-8080-exec-8] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:14.329  INFO 14976 --- [http-nio-8080-exec-4] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:16.353  INFO 14976 --- [http-nio-8080-exec-9] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:18.162  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:20.214  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:22.717  INFO 14976 --- [http-nio-8080-exec-1] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:25.198  INFO 14976 --- [http-nio-8080-exec-3] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:25.706  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:41.394  INFO 14976 --- [http-nio-8080-exec-8] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:41.904  INFO 14976 --- [http-nio-8080-exec-6] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:42.182  INFO 14976 --- [http-nio-8080-exec-10] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:44.405  INFO 14976 --- [http-nio-8080-exec-4] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:47.040  INFO 14976 --- [http-nio-8080-exec-9] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:35:50.496  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:13.134  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:16.572  INFO 14976 --- [http-nio-8080-exec-6] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:37:16.605  INFO 14976 --- [http-nio-8080-exec-6] c.l.note.service.impl.NoticeServiceImpl  : -->selectaAllNotice redis数据为空重新查询数据库
+2019-10-28 18:37:17.771  INFO 14976 --- [http-nio-8080-exec-9] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:21.365  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:24.149  INFO 14976 --- [http-nio-8080-exec-1] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:26.758  INFO 14976 --- [http-nio-8080-exec-3] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:33.617  INFO 14976 --- [http-nio-8080-exec-8] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:38.340  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:43.341  INFO 14976 --- [http-nio-8080-exec-6] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:48.580  INFO 14976 --- [http-nio-8080-exec-4] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:49.485  INFO 14976 --- [http-nio-8080-exec-10] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:51.480  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:37:53.464  INFO 14976 --- [http-nio-8080-exec-9] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:38:07.090  INFO 14976 --- [http-nio-8080-exec-7] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:38:20.648  INFO 14976 --- [http-nio-8080-exec-6] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:38:21.409  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:38:25.589  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:38:26.448  INFO 14976 --- [http-nio-8080-exec-3] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:38:28.517  INFO 14976 --- [http-nio-8080-exec-1] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:38:34.567  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:38:36.249  INFO 14976 --- [http-nio-8080-exec-6] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:38:39.663  INFO 14976 --- [http-nio-8080-exec-9] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:38:42.514  INFO 14976 --- [http-nio-8080-exec-3] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:38:45.177  INFO 14976 --- [http-nio-8080-exec-8] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:38:46.680  INFO 14976 --- [http-nio-8080-exec-4] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:38:49.722  INFO 14976 --- [http-nio-8080-exec-9] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:38:51.690  INFO 14976 --- [http-nio-8080-exec-1] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:38:53.975  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:38:55.509  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:39:01.630  INFO 14976 --- [http-nio-8080-exec-3] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:39:03.233  INFO 14976 --- [http-nio-8080-exec-4] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:39:09.669  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:39:10.116  INFO 14976 --- [http-nio-8080-exec-7] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:39:17.338  INFO 14976 --- [http-nio-8080-exec-6] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:39:20.669  INFO 14976 --- [http-nio-8080-exec-3] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:39:22.190  INFO 14976 --- [http-nio-8080-exec-4] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:39:24.142  INFO 14976 --- [http-nio-8080-exec-6] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:39:25.772  INFO 14976 --- [http-nio-8080-exec-10] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:39:27.910  INFO 14976 --- [http-nio-8080-exec-3] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:39:30.240  INFO 14976 --- [http-nio-8080-exec-9] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:39:51.218  INFO 14976 --- [http-nio-8080-exec-6] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:40:35.773  INFO 14976 --- [http-nio-8080-exec-7] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:42:22.338  INFO 14976 --- [http-nio-8080-exec-4] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:42:22.373  INFO 14976 --- [http-nio-8080-exec-4] c.l.note.service.impl.NoticeServiceImpl  : -->selectaAllNotice redis数据为空重新查询数据库
+2019-10-28 18:42:54.797  INFO 14976 --- [http-nio-8080-exec-2] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:50:13.189  INFO 14976 --- [http-nio-8080-exec-1] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:50:20.499  INFO 14976 --- [http-nio-8080-exec-4] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:50:20.535  INFO 14976 --- [http-nio-8080-exec-4] c.l.note.service.impl.NoticeServiceImpl  : -->selectaAllNotice redis数据为空重新查询数据库
+2019-10-28 18:50:25.908  INFO 14976 --- [http-nio-8080-exec-5] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:50:32.366  INFO 14976 --- [http-nio-8080-exec-10] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:50:34.113  INFO 14976 --- [http-nio-8080-exec-8] c.l.n.s.impl.IndexArticleServiceImpl     : 文章分页查询成功
+2019-10-28 18:50:36.235  INFO 14976 --- [http-nio-8080-exec-4] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:51:27.162  INFO 14976 --- [http-nio-8080-exec-1] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 18:55:28.259  INFO 14976 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-28 18:55:29.395  INFO 14976 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-28 18:55:29.407  INFO 14976 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-28 18:55:29.684  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : SpringBoot开始加载
+2019-10-28 18:55:29.814  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : Starting StartApplication on SF0080004198A with PID 14976 (E:\javaMyBlogs\myCloud\target\classes started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-10-28 18:55:29.815  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : No active profile set, falling back to default profiles: default
+2019-10-28 18:55:30.401  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-10-28 18:55:30.401  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 18:55:30.415  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
+2019-10-28 18:55:30.504  INFO 14976 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$109e6180] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 18:55:30.845  INFO 14976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-28 18:55:30.846  INFO 14976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-28 18:55:30.847  INFO 14976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-10-28 18:55:30.909  INFO 14976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-28 18:55:30.910  INFO 14976 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1088 ms
+2019-10-28 18:55:31.249  INFO 14976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-28 18:55:31.404  INFO 14976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-28 18:55:31.464  INFO 14976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 18:55:31.465  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : Started StartApplication in 1.768 seconds (JVM running for 7798.175)
+2019-10-28 18:55:31.472  INFO 14976 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-10-28 18:55:31.473  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : SpringBoot加载结束
+2019-10-28 18:55:39.023  INFO 14976 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-28 18:55:39.287  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : SpringBoot开始加载
+2019-10-28 18:55:39.357  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : Starting StartApplication on SF0080004198A with PID 14976 (E:\javaMyBlogs\myCloud\target\classes started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-10-28 18:55:39.358  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : No active profile set, falling back to default profiles: default
+2019-10-28 18:55:39.783  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-10-28 18:55:39.783  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 18:55:39.800  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-10-28 18:55:39.853  INFO 14976 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$109e6180] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 18:55:40.075  INFO 14976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-28 18:55:40.076  INFO 14976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-28 18:55:40.077  INFO 14976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-10-28 18:55:40.118  INFO 14976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-28 18:55:40.118  INFO 14976 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 755 ms
+2019-10-28 18:55:40.377  INFO 14976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-28 18:55:40.504  INFO 14976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-28 18:55:40.543  INFO 14976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 18:55:40.544  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : Started StartApplication in 1.248 seconds (JVM running for 7807.254)
+2019-10-28 18:55:40.546  INFO 14976 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-10-28 18:55:40.547  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : SpringBoot加载结束
+2019-10-28 18:58:07.764  INFO 14976 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-28 18:58:08.054  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : SpringBoot开始加载
+2019-10-28 18:58:08.112  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : Starting StartApplication on SF0080004198A with PID 14976 (E:\javaMyBlogs\myCloud\target\classes started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-10-28 18:58:08.113  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : No active profile set, falling back to default profiles: default
+2019-10-28 18:58:08.566  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-10-28 18:58:08.566  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 18:58:08.584  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2019-10-28 18:58:08.691  INFO 14976 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$109e6180] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 18:58:08.916  INFO 14976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-28 18:58:08.917  INFO 14976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-28 18:58:08.917  INFO 14976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-10-28 18:58:08.964  INFO 14976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-28 18:58:08.965  INFO 14976 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 849 ms
+2019-10-28 18:58:09.188  INFO 14976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-28 18:58:09.327  INFO 14976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-28 18:58:09.360  INFO 14976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 18:58:09.360  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : Started StartApplication in 1.294 seconds (JVM running for 7956.063)
+2019-10-28 18:58:09.363  INFO 14976 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-10-28 18:58:09.363  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : SpringBoot加载结束
+2019-10-28 19:02:29.783  INFO 14976 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-28 19:02:30.059  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : SpringBoot开始加载
+2019-10-28 19:02:30.115  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : Starting StartApplication on SF0080004198A with PID 14976 (E:\javaMyBlogs\myCloud\target\classes started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-10-28 19:02:30.116  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : No active profile set, falling back to default profiles: default
+2019-10-28 19:02:30.600  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-10-28 19:02:30.601  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 19:02:30.618  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-10-28 19:02:30.687  INFO 14976 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$109e6180] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 19:02:30.930  INFO 14976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-28 19:02:30.931  INFO 14976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-28 19:02:30.931  INFO 14976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-10-28 19:02:30.979  INFO 14976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-28 19:02:30.979  INFO 14976 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 858 ms
+2019-10-28 19:02:31.194  INFO 14976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-28 19:02:31.299  INFO 14976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-28 19:02:31.330  INFO 14976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 19:02:31.330  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : Started StartApplication in 1.26 seconds (JVM running for 8218.022)
+2019-10-28 19:02:31.333  INFO 14976 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-10-28 19:02:31.333  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : SpringBoot加载结束
+2019-10-28 19:04:22.168  INFO 14976 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 19:04:22.171  INFO 14976 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-28 19:04:22.181  INFO 14976 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-10-28 19:04:22.185  INFO 14976 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-10-28 19:04:22.185  INFO 14976 --- [http-nio-8080-exec-2] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:04:22.309  INFO 14976 --- [http-nio-8080-exec-2] c.l.note.service.impl.NoticeServiceImpl  : -->selectaAllNotice redis数据为空重新查询数据库
+2019-10-28 19:04:22.670  INFO 14976 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-10-28 19:04:25.374  INFO 14976 --- [http-nio-8080-exec-4] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:04:26.143  INFO 14976 --- [http-nio-8080-exec-5] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:04:27.056  INFO 14976 --- [http-nio-8080-exec-8] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:04:27.882  INFO 14976 --- [http-nio-8080-exec-2] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:04:28.526  INFO 14976 --- [http-nio-8080-exec-6] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:04:29.127  INFO 14976 --- [http-nio-8080-exec-10] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:04:36.546  INFO 14976 --- [http-nio-8080-exec-4] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:
+2019-10-28 19:04:52.868  INFO 14976 --- [http-nio-8080-exec-8] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:04:53.645  INFO 14976 --- [http-nio-8080-exec-7] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:04:54.309  INFO 14976 --- [http-nio-8080-exec-6] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:04:54.914  INFO 14976 --- [http-nio-8080-exec-10] c.l.note.service.impl.NoticeServiceImpl  : whetherFirstStop----->:1
+2019-10-28 19:08:07.521  INFO 14976 --- [Thread-28] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-28 19:08:08.633  INFO 14976 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-10-28 19:08:08.651  INFO 14976 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-10-28 19:08:08.890  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : SpringBoot开始加载
+2019-10-28 19:08:08.935  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : Starting StartApplication on SF0080004198A with PID 14976 (E:\javaMyBlogs\myCloud\target\classes started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-10-28 19:08:08.935  INFO 14976 --- [restartedMain] com.lyy.note.StartApplication            : No active profile set, falling back to default profiles: default
+2019-10-28 19:08:09.352  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-10-28 19:08:09.352  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 19:08:09.371  INFO 14976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2019-10-28 19:08:09.439  INFO 14976 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$109e6180] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 19:08:09.656  INFO 14976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-28 19:08:09.657  INFO 14976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-28 19:08:09.657  INFO 14976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-10-28 19:08:09.700  INFO 14976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-28 19:08:09.700  INFO 14976 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 758 ms
+2019-10-28 19:08:09.871  INFO 14976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
