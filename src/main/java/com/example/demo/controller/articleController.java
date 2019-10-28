@@ -56,7 +56,6 @@ public class articleController {
 				return ResponseDTO.buildSuccess("更新成功");
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
 			log.error("-->addArticleEditor 插入文章异常");
 			e.printStackTrace();
 		}

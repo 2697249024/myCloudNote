@@ -26,11 +26,9 @@ public class UserServceImpl implements UserService{
 			List<User> AllUsers = userMapper.selectAllUser1();
 			return AllUsers;
 		} catch (BadSqlGrammarException e) {
-			// TODO: handle exception
 			log.error("sql语句错误");
 			return null;
 		} catch (Exception e) {
-			// TODO: handle exception
 			log.error("其他异常");
 			return null;
 		}

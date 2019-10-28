@@ -1,27 +1,17 @@
-2019-09-04 14:25:28.862  INFO 2896 --- [main] com.example.demo.Demo1ApplicationTests   : Starting Demo1ApplicationTests on SF0080004198A with PID 2896 (started by 80004198 in D:\work\SpringToolSuiteWorkSpace\myCloud)
-2019-09-04 14:25:28.873  INFO 2896 --- [main] com.example.demo.Demo1ApplicationTests   : No active profile set, falling back to default profiles: default
-2019-09-04 14:25:30.345  INFO 2896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-09-04 14:25:30.350  INFO 2896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-04 14:25:30.386  INFO 2896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
-2019-09-04 14:25:30.814  INFO 2896 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$736d1120] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-04 14:25:32.907  INFO 2896 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-04 14:25:33.505  INFO 2896 --- [main] com.example.demo.Demo1ApplicationTests   : Started Demo1ApplicationTests in 5.131 seconds (JVM running for 6.581)
-2019-09-04 14:25:33.785  INFO 2896 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-04 14:31:59.509  INFO 3132 --- [main] com.example.demo.Demo1ApplicationTests   : Starting Demo1ApplicationTests on SF0080004198A with PID 3132 (started by 80004198 in D:\work\SpringToolSuiteWorkSpace\myCloud)
-2019-09-04 14:31:59.510  INFO 3132 --- [main] com.example.demo.Demo1ApplicationTests   : No active profile set, falling back to default profiles: default
-2019-09-04 14:32:00.280  INFO 3132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-09-04 14:32:00.283  INFO 3132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-04 14:32:00.315  INFO 3132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
-2019-09-04 14:32:00.685  INFO 3132 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8ae5763a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-04 14:32:02.215  INFO 3132 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-04 14:32:02.827  INFO 3132 --- [main] com.example.demo.Demo1ApplicationTests   : Started Demo1ApplicationTests in 3.642 seconds (JVM running for 4.618)
-2019-09-04 14:32:02.996  INFO 3132 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-04 14:42:26.225  INFO 2880 --- [main] com.example.demo.Demo1ApplicationTests   : Starting Demo1ApplicationTests on SF0080004198A with PID 2880 (started by 80004198 in D:\work\SpringToolSuiteWorkSpace\myCloud)
-2019-09-04 14:42:26.227  INFO 2880 --- [main] com.example.demo.Demo1ApplicationTests   : No active profile set, falling back to default profiles: default
-2019-09-04 14:42:26.925  INFO 2880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-09-04 14:42:26.928  INFO 2880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-04 14:42:26.966  INFO 2880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
-2019-09-04 14:42:27.321  INFO 2880 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e3ec3db6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-04 14:42:28.866  INFO 2880 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-04 14:42:29.364  INFO 2880 --- [main] com.example.demo.Demo1ApplicationTests   : Started Demo1ApplicationTests in 3.465 seconds (JVM running for 4.494)
-2019-09-04 14:42:29.534  INFO 2880 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-05 16:25:25.904  INFO 10368 --- [main] com.example.demo.Demo1ApplicationTests   : Starting Demo1ApplicationTests on SF0080004198A with PID 10368 (started by 80004198 in D:\work\SpringToolSuiteWorkSpace\myCloud)
+2019-10-05 16:25:25.959  INFO 10368 --- [main] com.example.demo.Demo1ApplicationTests   : No active profile set, falling back to default profiles: default
+2019-10-05 16:25:27.477  INFO 10368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-10-05 16:25:27.482  INFO 10368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-05 16:25:27.529  INFO 10368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-10-05 16:25:28.003  INFO 10368 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1de98962] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-05 16:25:30.143  INFO 10368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-05 16:25:30.913  INFO 10368 --- [main] com.example.demo.Demo1ApplicationTests   : Started Demo1ApplicationTests in 5.463 seconds (JVM running for 7.353)
+2019-10-05 16:26:02.829  INFO 10368 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-05 16:27:06.482  INFO 9448 --- [main] com.example.demo.Demo1ApplicationTests   : Starting Demo1ApplicationTests on SF0080004198A with PID 9448 (started by 80004198 in D:\work\SpringToolSuiteWorkSpace\myCloud)
+2019-10-05 16:27:06.483  INFO 9448 --- [main] com.example.demo.Demo1ApplicationTests   : No active profile set, falling back to default profiles: default
+2019-10-05 16:27:07.570  INFO 9448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-10-05 16:27:07.574  INFO 9448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-05 16:27:07.615  INFO 9448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-10-05 16:27:08.136  INFO 9448 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8592ad33] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-05 16:27:10.085  INFO 9448 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-05 16:27:10.961  INFO 9448 --- [main] com.example.demo.Demo1ApplicationTests   : Started Demo1ApplicationTests in 4.92 seconds (JVM running for 6.531)
