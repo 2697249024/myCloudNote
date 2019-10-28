@@ -1,4 +1,4 @@
-package com.example.demo.study.StudyConsumer;
+package com.lyy.note.study.StudyConsumer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
