@@ -3,10 +3,14 @@ package com.lyy.note.controller;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import javax.annotation.Resource;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lyy.note.entity.ArticlePageHelperParam;
 import com.lyy.note.entity.pojo.ArticleTitle;
 import com.lyy.note.entity.pojo.ShowArticle;
+import com.lyy.note.entity.vo.TagResultVo;
+import com.lyy.note.exception.ActualException;
 import com.lyy.note.service.IndexArticleService;
+import com.lyy.note.service.impl.IndexArticleServiceImpl;
 import com.lyy.note.service.impl.NoticeServiceImpl;
 import com.lyy.note.util.PageHelper;
 import com.lyy.note.vo.ResponseDTO;
@@ -28,7 +35,14 @@ import com.lyy.note.vo.ResponseDTO;
 public class articleController {
 	@Autowired
 	IndexArticleService indexArticleService;
-	private static final Logger log =LoggerFactory.getLogger(NoticeServiceImpl.class);
+	
+	@Autowired
+	IndexArticleServiceImpl indexArticleServiceImpl;
+	
+	@Resource
+	RedisTemplate<String, List<TagResultVo>> redisTemplate;
+	
+	private static final Logger logger =LoggerFactory.getLogger(NoticeServiceImpl.class);
 	
 	/***
 	 *  添加文章内容
@@ -49,7 +63,7 @@ public class articleController {
 				return ResponseDTO.buildSuccess("更新成功");
 			}
 		} catch (Exception e) {
-			log.error("-->addArticleEditor 插入文章异常");
+			logger.error("-->addArticleEditor 插入文章异常");
 			e.printStackTrace();
 		}
 	
@@ -92,7 +106,7 @@ public class articleController {
 		//放入pageHelper 中
 		PageHelper<ShowArticle> pageHelper = new PageHelper<ShowArticle>(currentPage, pageSize, selectCountArticle, selecArtilceByPageHelper);
 		if(selecArtilceByPageHelper.isEmpty()) {
-			log.debug("selecArtilceByPageHelper--->查询结果为null");
+			logger.debug("selecArtilceByPageHelper--->查询结果为null");
 			return ResponseDTO.buildFailure("查询分页失败");
 		}
 		return ResponseDTO.buildSuccess(pageHelper);
@@ -128,6 +142,31 @@ public class articleController {
 	}
 	
 	//TODO 热门标签
-	
+	/***
+	 * 查找热门标签
+	 * @return
+	 */
+	@CrossOrigin
+	@RequestMapping(value = "/selectHotLabels",method = RequestMethod.POST)
+	public ResponseDTO<List<TagResultVo>> selectHotLabels() {
+		try {
+			//首次查询redis 并设置过期时间
+			if(redisTemplate.opsForValue().get("tags")==null) {
+				List<TagResultVo> selectHotLabels = indexArticleServiceImpl.selectHotLabels();
+				redisTemplate.opsForValue().set("tags", selectHotLabels, 5, TimeUnit.MINUTES);
+				logger.info("热门标签放入缓存过期时间：5min");
+				return ResponseDTO.buildSuccess(selectHotLabels);
+			}
+			//从redis中获取
+			List<TagResultVo> selectHotLabels = redisTemplate.opsForValue().get("tags");
+			return ResponseDTO.buildSuccess(selectHotLabels);
+		} catch (Exception e) {
+			logger.error("selectHotLabels-->[热门标签计算异常]",e);
+			if(e instanceof ActualException) {
+				return ResponseDTO.buildFailure(e.getMessage());
+			}
+			return ResponseDTO.buildFailure("热门标签计算异常");
+		}
+	}
 	
 }

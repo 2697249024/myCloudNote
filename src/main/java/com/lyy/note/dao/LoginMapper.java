@@ -7,7 +7,9 @@ import org.apache.ibatis.annotations.Param;
 
 import com.lyy.note.entity.User;
 
-//登录
+/**
+ * 用户
+ */
 @Mapper
 public interface LoginMapper {
 	//查询所有用户

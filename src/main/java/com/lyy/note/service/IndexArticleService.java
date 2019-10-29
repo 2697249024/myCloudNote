@@ -10,6 +10,8 @@ import com.lyy.note.entity.Tag;
 import com.lyy.note.entity.pojo.ArticleInsertPojo;
 import com.lyy.note.entity.pojo.ArticleTitle;
 import com.lyy.note.entity.pojo.ShowArticle;
+import com.lyy.note.entity.vo.TagResultVo;
+import com.lyy.note.exception.ActualException;
 import com.lyy.note.util.PageHelper;
 
 /***
@@ -54,4 +56,13 @@ public interface IndexArticleService {
 	 * 插入详情内容 
 	 */
 	Boolean insertContent(Content content);
+	
+	
+	/***
+	 * 获取热门标签
+	 * @return 标签集合
+	 * @throws ActualException 
+	 */
+	List<TagResultVo> selectHotLabels() throws ActualException;
+	
 }

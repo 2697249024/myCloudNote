@@ -54,8 +54,6 @@
  	</select>
  	
  	
- 	
- 	
  	<!-- 统计笔记总数 -->
  	<select id="selectCountArticle" parameterType="java.lang.String" resultType="java.lang.Integer">
  		select count(id)  from
@@ -97,15 +95,10 @@
  	</insert>
  	
  	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
+ 	<!-- 获取所有标签信息 -->
+ 	<select id="selectAllLabels" resultType="com.lyy.note.entity.Tag">
+ 		select tag_id tagId,tag1,tag2,tag3 from tag
+ 	</select>
  	
        
 </mapper>

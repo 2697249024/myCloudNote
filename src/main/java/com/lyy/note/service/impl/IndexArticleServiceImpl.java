@@ -1,15 +1,19 @@
 package com.lyy.note.service.impl;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.proxy.Factory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import com.lyy.note.dao.ShowArticleMapper;
 import com.lyy.note.entity.ArticlePageHelperParam;
@@ -18,9 +22,11 @@ import com.lyy.note.entity.Tag;
 import com.lyy.note.entity.pojo.ArticleInsertPojo;
 import com.lyy.note.entity.pojo.ArticleTitle;
 import com.lyy.note.entity.pojo.ShowArticle;
+import com.lyy.note.entity.vo.TagResultVo;
+import com.lyy.note.exception.ActualException;
 import com.lyy.note.service.IndexArticleService;
 import com.lyy.note.util.GetTimeUtil;
-import com.lyy.note.util.PageHelper;
+import com.lyy.note.util.StringChackUtils;
 
 @Service
 @Transactional
@@ -154,4 +160,50 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 		return false;
 	}
 	
+	/***
+	 * 获取热门标签
+	 * @throws ActualException 
+	 */
+	@Override
+	public List<TagResultVo> selectHotLabels() throws ActualException {
+		//获取所有标签
+		List<Tag> allLabels = showArticleMapper.selectAllLabels();
+		if(allLabels.size()==0) {
+			throw new ActualException("未获取标签信息，请检查网络后重试！"); 
+		}
+		List<String> tagList = new ArrayList<>();
+		
+		//处理标签
+		for (int i = 0; i < allLabels.size(); i++) {
+			String tag1 = allLabels.get(i).getTag1();
+			String tag2 = allLabels.get(i).getTag2();
+			String tag3 = allLabels.get(i).getTag3();
+			String ne1 = StringChackUtils.nesgame(tag1);
+			String ne2 = StringChackUtils.nesgame(tag2);
+			String ne3 = StringChackUtils.nesgame(tag3);
+			if(!StringUtils.isEmpty(ne1)) {
+				tagList.add(ne1);
+			}
+			if(!StringUtils.isEmpty(ne2)) {
+				tagList.add(ne2);
+			}
+			if(!StringUtils.isEmpty(ne3)) {
+				tagList.add(ne3);
+			}
+		}
+		//筛选
+		List<TagResultVo> list;
+		try {
+			list = new ArrayList<>();
+			//按出现次数从大到小排序 筛选出出现次数最多的前16个字符串 
+			tagList.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).forEach( (key, value)->{
+				TagResultVo a= new TagResultVo(); a.name = key; a.count = value; list.add(a);} );
+			List<TagResultVo> collect = list.stream().sorted(Comparator.comparing(TagResultVo::getCount).reversed()).limit(16).collect(Collectors.toList());
+			return collect;
+		} catch (Exception e) {
+			log.error("热门标签处理异常",e.getMessage());
+			throw new ActualException("热门标签信息处理异常"); 
+		}
+	}
 }
+

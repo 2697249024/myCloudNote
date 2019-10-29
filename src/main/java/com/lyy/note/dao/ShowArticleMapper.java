@@ -46,4 +46,9 @@ public interface ShowArticleMapper {
 	 */
 	Boolean insertContent(Content content);
 	
+	/***
+	 *获取所有标签信息
+	 */
+	List<Tag> selectAllLabels();
+	
 }
