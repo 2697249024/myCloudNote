@@ -44,7 +44,6 @@ public class Lambda {
 		
 		tyQueue.forEach( (a) -> System.out.println(a.name + ","+a.count ));
 		
-		
 	}
 	
 }

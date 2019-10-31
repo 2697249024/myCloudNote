@@ -174,23 +174,28 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 		List<String> tagList = new ArrayList<>();
 		
 		//处理标签
-		for (int i = 0; i < allLabels.size(); i++) {
-			String tag1 = allLabels.get(i).getTag1();
-			String tag2 = allLabels.get(i).getTag2();
-			String tag3 = allLabels.get(i).getTag3();
-			String ne1 = StringChackUtils.nesgame(tag1);
-			String ne2 = StringChackUtils.nesgame(tag2);
-			String ne3 = StringChackUtils.nesgame(tag3);
-			if(!StringUtils.isEmpty(ne1)) {
-				tagList.add(ne1);
+		allLabels.forEach(p ->{
+			String tag1 = p.getTag1();
+			String tag2 = p.getTag2();
+			String tag3 = p.getTag3();
+			try {
+				String ne1 = StringChackUtils.nesgame(tag1);
+				String ne2 = StringChackUtils.nesgame(tag2);
+				String ne3 = StringChackUtils.nesgame(tag3);
+				if(!StringUtils.isEmpty(ne1)) {
+					tagList.add(ne1);
+				}
+				if(!StringUtils.isEmpty(ne2)) {
+					tagList.add(ne2);
+				}
+				if(!StringUtils.isEmpty(ne3)) {
+					tagList.add(ne3);
+				}	
+			} catch (ActualException e) {
+				log.error("获取热门标签异常", e);
 			}
-			if(!StringUtils.isEmpty(ne2)) {
-				tagList.add(ne2);
-			}
-			if(!StringUtils.isEmpty(ne3)) {
-				tagList.add(ne3);
-			}
-		}
+		});
+		
 		//筛选
 		List<TagResultVo> list;
 		try {
