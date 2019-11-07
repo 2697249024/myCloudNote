@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.dao.UserMapper">
-  <resultMap id="BaseResultMap" type="com.example.demo.entity.User1">
+<mapper namespace="com.lyy.note.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.lyy.note.entity.User1">
     <result column="user_id" jdbcType="VARCHAR" property="userId" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
@@ -13,7 +13,7 @@
 		select user_id ,user_name ,phone,email,status,role_id from user 
 	</select>
 	<!-- 分页查询 -->
- 	<select id="selectAllUserByPageQuery"  resultMap="BaseResultMap" parameterType="com.example.demo.vo.PageQueryDTO">
+ 	<select id="selectAllUserByPageQuery"  resultMap="BaseResultMap" parameterType="com.lyy.note.vo.PageQueryDTO">
  		SELECT user_id ,user_name ,phone,email,status,role_id from user_temp LIMIT #{startIndex} , #{pageSize}
  	</select>
         

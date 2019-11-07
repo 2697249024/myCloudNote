@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.dao.ShowArticleMapper">
- <resultMap id="ShowArticleMap" type="com.example.demo.entity.pojo.ShowArticle">
+<mapper namespace="com.lyy.note.dao.ShowArticleMapper">
+ <resultMap id="ShowArticleMap" type="com.lyy.note.entity.pojo.ShowArticle">
  	<result column="id"  property="id" />
     <result column="articleTitle"  property="articleTitle" />
     <result column="userName"  property="userName" />
@@ -29,21 +29,46 @@
  	</select>
  	
  	<!-- 笔记分页查询 -->
- 	<select id="selecArtilceByPageHelper" parameterType="java.lang.Integer" resultMap="ShowArticleMap">
+ <!-- 	<select id="selecArtilceByPageHelper" parameterType="java.lang.Integer" resultMap="ShowArticleMap">
 	 	select ar.id, ar.article_title articleTitle,us.user_name userName,ar.article_create_date articleCreateDate,ta.tag1,ta.tag2,ta.tag3,ar.article_intro articleIntro,ar.article_picture articlePicture,co.detial detial
 		from article ar INNER JOIN content co 
 		on ar.article_content_id=co.content_id 
 		INNER JOIN user us on ar.posted_id = us.user_id 
 		INNER JOIN tag ta on ar.article_tag_id = ta.tag_id
 		ORDER BY ar.article_create_date desc LIMIT #{currentPage},#{pageSize}
+ 	</select> -->
+ 	
+ 	<!-- 笔记分页查询 -->
+ 	<select id="selecArtilceByPageHelper" parameterType="com.lyy.note.entity.ArticlePageHelperParam" resultMap="ShowArticleMap">
+	 	select * from
+		(select ar.id, ar.article_title articleTitle,us.user_name userName,ar.article_create_date articleCreateDate,ta.tag1,ta.tag2,ta.tag3,ar.article_intro articleIntro,ar.article_picture articlePicture,co.detial detial
+		from article ar INNER JOIN content co 
+		on ar.article_content_id=co.content_id 
+		INNER JOIN user us on ar.posted_id = us.user_id 
+		INNER JOIN tag ta on ar.article_tag_id = ta.tag_id
+		ORDER BY ar.article_create_date desc ) tg
+		<if test="tags!=null">
+		where tg.tag1 like CONCAT(#{tags},'%') or tg.tag2 like  CONCAT(#{tags},'%') or tg.tag3 like CONCAT(#{tags},'%') 
+		</if>
+		LIMIT #{currentPage},#{pageSize}
  	</select>
+ 	
  	
  	<!-- 统计笔记总数 -->
- 	<select id="selectCountArticle" resultType="java.lang.Integer">
- 		SELECT count(id)  FROM article
+ 	<select id="selectCountArticle" parameterType="java.lang.String" resultType="java.lang.Integer">
+ 		select count(id)  from
+		(select ar.id, ar.article_title articleTitle,us.user_name userName,ar.article_create_date articleCreateDate,ta.tag1,ta.tag2,ta.tag3,ar.article_intro articleIntro,ar.article_picture articlePicture,co.detial detial
+		from article ar INNER JOIN content co 
+		on ar.article_content_id=co.content_id 
+		INNER JOIN user us on ar.posted_id = us.user_id 
+		INNER JOIN tag ta on ar.article_tag_id = ta.tag_id
+		ORDER BY ar.article_create_date desc ) tg
+		<if test="tags != null">
+		where tg.tag1 like CONCAT(#{tags},'%') or tg.tag2 like CONCAT(#{tags},'%') or tg.tag3 like CONCAT(#{tags},'%')
+		</if>
  	</select>
  	
-   <resultMap id="selectArticleTitleMap" type="com.example.demo.entity.pojo.ArticleTitle">
+   <resultMap id="selectArticleTitleMap" type="com.lyy.note.entity.pojo.ArticleTitle">
  	<result column="id"  property="id" />
     <result column="article_title"  property="articleTitle" />
   </resultMap>
@@ -54,31 +79,26 @@
  	
  	<!-- 插入文章内容 -->
  	
- 	<insert id="insertArticle" parameterType="com.example.demo.entity.pojo.ArticleInsertPojo">
+ 	<insert id="insertArticle" parameterType="com.lyy.note.entity.pojo.ArticleInsertPojo">
  	insert into article (id,article_title,article_content_id,posted_id,article_create_date,article_tag_id,article_intro,article_picture)
  	VALUES (#{id},#{articleTitle},#{articleContentId},#{postedId},#{articleCreateDate},#{articleTagId},#{articleIntro},#{articlePicture});
  	</insert>
  	
  	<!-- 插入标签内容 -->
- 	<insert id="insertTag" parameterType="com.example.demo.entity.Tag">
+ 	<insert id="insertTag" parameterType="com.lyy.note.entity.Tag">
  		insert into tag (tag_id,tag1,tag2,tag3)VALUES(#{tagId},#{tag1},#{tag2},#{tag3});
  	</insert>
  	
  	<!-- 插入详情表 -->
- 	<insert id="insertContent" parameterType="com.example.demo.entity.Content">
+ 	<insert id="insertContent" parameterType="com.lyy.note.entity.Content">
  		insert into content (content_id,detial)VALUES(#{contentId},#{detial});
  	</insert>
  	
  	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
+ 	<!-- 获取所有标签信息 -->
+ 	<select id="selectAllLabels" resultType="com.lyy.note.entity.Tag">
+ 		select tag_id tagId,tag1,tag2,tag3 from tag
+ 	</select>
  	
        
 </mapper>
