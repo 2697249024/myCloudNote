@@ -63,7 +63,7 @@ public class LambdaStudy {
 //		String collect = primes.stream().map(String::valueOf).collect(Collectors.joining("-QwQ-","[","]"));
 //		System.out.println(collect);
 		//数据分组
-		List<String> views =  Arrays.asList("wsbs","xafaswzx","b8fw","ad");
+//		List<String> views =  Arrays.asList("wsbs","xafaswzx","b8fw","ad");
 		//根据字符串长度分组Map<Integer, List<String>>
 		//Map<Integer, List<String>> collect = views.stream().collect(Collectors.groupingBy(String::length));
 		
@@ -74,7 +74,7 @@ public class LambdaStudy {
 //			value.stream().forEach(System.out::println);
 //		});
 	//	System.out.println(collect.toString());
-	
+		
 
 		
 		
