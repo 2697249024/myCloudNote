@@ -51,4 +51,12 @@ public interface ShowArticleMapper {
 	 */
 	List<Tag> selectAllLabels();
 	
+	/**
+	 * 根据id查询文章信息
+	 */
+	Integer selectArticleById(String id);
+	/***
+	 * 更新文章阅读数
+	 */
+	Boolean updateReadingQuantity(@Param("readingQuantity")Integer readingQuantity,@Param("id") String id);
 }

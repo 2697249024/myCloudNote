@@ -155,7 +155,6 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 					System.out.println("更新失败");
 					return false;
 				}
-				
 			}
 		return false;
 	}
@@ -209,6 +208,26 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 			log.error("热门标签处理异常",e.getMessage());
 			throw new ActualException("热门标签信息处理异常"); 
 		}
+	}
+	
+	/***
+	 * 更新文章阅读数
+	 * @throws ActualException 自定义异常
+	 */
+	@Override
+	public Boolean updateReadingQuantity(Integer readingQuantity,String id){
+		try {
+			Boolean updateReslult = showArticleMapper.updateReadingQuantity(readingQuantity, id);
+			return updateReslult;
+		} catch (Exception e) {
+			log.error("阅读数更新失败 文章id：[{}],阅读量：[{}]",id,readingQuantity);
+		}
+		return false;
+	}
+	@Override
+	public Integer selectArticleById(String id) {
+		Integer selectArticleById = showArticleMapper.selectArticleById(id);
+		return selectArticleById;
 	}
 }
 

@@ -100,5 +100,14 @@
  		select tag_id tagId,tag1,tag2,tag3 from tag
  	</select>
  	
+ 	<!-- 根据id 查询文章阅读数 -->
+ 	<select id="selectArticleById" resultType="java.lang.Integer" parameterType="java.lang.String" >
+ 	select reading_quantity from article where id = #{id}
+ 	</select>
+ 	<!-- 更新文章阅读数 -->
+ 	<update id="updateReadingQuantity">
+ 		UPDATE article set reading_quantity = #{readingQuantity} where id = #{id}
+ 	</update>
+ 	
        
 </mapper>
