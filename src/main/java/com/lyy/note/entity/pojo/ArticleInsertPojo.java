@@ -34,6 +34,16 @@ public class ArticleInsertPojo implements Serializable{
 	private String articleIntro;
 	/**简介配图url*/
 	private String articlePicture;
+	/**阅读量*/
+	private Integer readingQuantity;
+	
+	
+	public Integer getReadingQuantity() {
+		return readingQuantity;
+	}
+	public void setReadingQuantity(Integer readingQuantity) {
+		this.readingQuantity = readingQuantity;
+	}
 	public String getId() {
 		return id;
 	}
@@ -82,12 +92,14 @@ public class ArticleInsertPojo implements Serializable{
 	public void setArticlePicture(String articlePicture) {
 		this.articlePicture = articlePicture;
 	}
+	
 	@Override
 	public String toString() {
 		return "ArticleInsertPojo [id=" + id + ", articleTitle=" + articleTitle + ", articleContentId="
 				+ articleContentId + ", postedId=" + postedId + ", articleCreateDate=" + articleCreateDate
 				+ ", articleTagId=" + articleTagId + ", articleIntro=" + articleIntro + ", articlePicture="
-				+ articlePicture + "]";
+				+ articlePicture + ", readingQuantity=" + readingQuantity + "]";
 	}
+	
 	
 }

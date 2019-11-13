@@ -30,6 +30,15 @@ public class ShowArticle implements Serializable{
 	private String articlePicture;
 	/**笔记详情*/
 	private String detial;
+	/**阅读量*/
+	private Integer readingQuantity;
+	
+	public Integer getReadingQuantity() {
+		return readingQuantity;
+	}
+	public void setReadingQuantity(Integer readingQuantity) {
+		this.readingQuantity = readingQuantity;
+	}
 	public String getId() {
 		return id;
 	}
@@ -94,7 +103,8 @@ public class ShowArticle implements Serializable{
 	public String toString() {
 		return "ShowArticle [id=" + id + ", articleTitle=" + articleTitle + ", userName=" + userName
 				+ ", articleCreateDate=" + articleCreateDate + ", tag1=" + tag1 + ", tag2=" + tag2 + ", tag3=" + tag3
-				+ ", articleIntro=" + articleIntro + ", articlePicture=" + articlePicture + ", detial=" + detial + "]";
+				+ ", articleIntro=" + articleIntro + ", articlePicture=" + articlePicture + ", detial=" + detial
+				+ ", readingQuantity=" + readingQuantity + "]";
 	}
-	
+
 }

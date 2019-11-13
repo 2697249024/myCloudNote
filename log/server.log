@@ -1,15 +1,172 @@
-2019-10-29 18:09:32.874  INFO 12152 --- [main] com.lyy.note.Demo1ApplicationTests       : Starting Demo1ApplicationTests on SF0080004198A with PID 12152 (started by 80004198 in E:\javaMyBlogs\myCloud)
-2019-10-29 18:09:32.876  INFO 12152 --- [main] com.lyy.note.Demo1ApplicationTests       : No active profile set, falling back to default profiles: default
-2019-10-29 18:09:33.733  INFO 12152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-10-29 18:09:33.736  INFO 12152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-10-29 18:09:33.773  INFO 12152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
-2019-10-29 18:09:34.150  INFO 12152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5e658c26] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-10-29 18:09:35.767  INFO 12152 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-29 18:09:36.348  INFO 12152 --- [main] com.lyy.note.Demo1ApplicationTests       : Started Demo1ApplicationTests in 3.835 seconds (JVM running for 4.802)
-2019-10-29 18:09:36.500  INFO 12152 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lyy.note.RedisTest], using SpringBootContextLoader
-2019-10-29 18:09:36.501  INFO 12152 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.lyy.note.RedisTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-10-29 18:09:36.501  INFO 12152 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.lyy.note.RedisTest]: RedisTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-10-29 18:09:36.502  INFO 12152 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.lyy.note.StartApplication for test class com.lyy.note.RedisTest
-2019-10-29 18:09:36.504  INFO 12152 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-10-29 18:09:36.504  INFO 12152 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5e0c4f21, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2c18a3ea, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@166c2c17, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@25953be6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19dc0d32, org.springframework.test.context.transaction.TransactionalTestExecutionListener@70b2fa10, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c96c85, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@b0f2d91, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7243145f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@15c6027d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5927f904, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2bb62414]
-2019-10-29 18:09:36.580  INFO 12152 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:17:11.668  INFO 10196 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Starting IndexArticleServiceImplTest on SF0080004198A with PID 10196 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 16:17:11.676  INFO 10196 --- [main] c.l.n.s.IndexArticleServiceImplTest      : No active profile set, falling back to default profiles: default
+2019-11-12 16:17:12.560  INFO 10196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:17:12.563  INFO 10196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:17:12.611  INFO 10196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
+2019-11-12 16:17:12.974  INFO 10196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8ae4c1d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:17:14.610  INFO 10196 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:17:15.315  INFO 10196 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Started IndexArticleServiceImplTest in 3.982 seconds (JVM running for 5.096)
+2019-11-12 16:17:15.529  INFO 10196 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 16:17:16.404  INFO 10196 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 16:17:16.525  INFO 10196 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:17:16.541  INFO 10196 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-12 16:17:16.965  INFO 10196 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-12 16:18:07.116  INFO 13136 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Starting IndexArticleServiceImplTest on SF0080004198A with PID 13136 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 16:18:07.117  INFO 13136 --- [main] c.l.n.s.IndexArticleServiceImplTest      : No active profile set, falling back to default profiles: default
+2019-11-12 16:18:07.971  INFO 13136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:18:07.974  INFO 13136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:18:08.020  INFO 13136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-11-12 16:18:08.397  INFO 13136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c39ea502] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:18:09.953  INFO 13136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:18:10.477  INFO 13136 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Started IndexArticleServiceImplTest in 3.7 seconds (JVM running for 4.76)
+2019-11-12 16:18:10.668  INFO 13136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 16:18:11.498  INFO 13136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 16:18:11.649  INFO 13136 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:18:11.668  INFO 13136 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-12 16:18:12.056  INFO 13136 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-12 16:18:53.476  INFO 11144 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Starting IndexArticleServiceImplTest on SF0080004198A with PID 11144 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 16:18:53.477  INFO 11144 --- [main] c.l.n.s.IndexArticleServiceImplTest      : No active profile set, falling back to default profiles: default
+2019-11-12 16:18:54.217  INFO 11144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:18:54.220  INFO 11144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:18:54.255  INFO 11144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2019-11-12 16:18:54.630  INFO 11144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2dce4d20] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:18:56.178  INFO 11144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:18:56.704  INFO 11144 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Started IndexArticleServiceImplTest in 3.56 seconds (JVM running for 4.646)
+2019-11-12 16:18:56.880  INFO 11144 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 16:18:57.738  INFO 11144 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 16:18:57.890  INFO 11144 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:18:57.910  INFO 11144 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-12 16:18:58.281  INFO 11144 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-12 16:21:55.006  INFO 14432 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Starting IndexArticleServiceImplTest on SF0080004198A with PID 14432 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 16:21:55.007  INFO 14432 --- [main] c.l.n.s.IndexArticleServiceImplTest      : No active profile set, falling back to default profiles: default
+2019-11-12 16:21:55.790  INFO 14432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:21:55.793  INFO 14432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:21:55.836  INFO 14432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-11-12 16:21:56.264  INFO 14432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ce7c6be6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:21:57.823  INFO 14432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:21:58.366  INFO 14432 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Started IndexArticleServiceImplTest in 3.698 seconds (JVM running for 4.807)
+2019-11-12 16:21:58.567  INFO 14432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 16:21:59.357  INFO 14432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 16:21:59.505  INFO 14432 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:21:59.524  INFO 14432 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-12 16:21:59.884  INFO 14432 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-12 16:24:19.126  INFO 14804 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Starting IndexArticleServiceImplTest on SF0080004198A with PID 14804 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 16:24:19.127  INFO 14804 --- [main] c.l.n.s.IndexArticleServiceImplTest      : No active profile set, falling back to default profiles: default
+2019-11-12 16:24:19.857  INFO 14804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:24:19.860  INFO 14804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:24:19.895  INFO 14804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2019-11-12 16:24:20.250  INFO 14804 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$78d3c606] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:24:21.791  INFO 14804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:24:22.285  INFO 14804 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Started IndexArticleServiceImplTest in 3.477 seconds (JVM running for 4.558)
+2019-11-12 16:24:22.658  INFO 14804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 16:24:23.483  INFO 14804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 16:24:23.783  INFO 14804 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:24:23.804  INFO 14804 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-12 16:24:24.005  INFO 14804 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-12 16:28:52.703  INFO 11244 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Starting IndexArticleServiceImplTest on SF0080004198A with PID 11244 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 16:28:52.704  INFO 11244 --- [main] c.l.n.s.IndexArticleServiceImplTest      : No active profile set, falling back to default profiles: default
+2019-11-12 16:28:53.561  INFO 11244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:28:53.565  INFO 11244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:28:53.607  INFO 11244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-11-12 16:28:53.988  INFO 11244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$39f4de4f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:28:55.507  INFO 11244 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:28:56.032  INFO 11244 --- [main] c.l.n.s.IndexArticleServiceImplTest      : Started IndexArticleServiceImplTest in 3.65 seconds (JVM running for 4.785)
+2019-11-12 16:28:56.434  INFO 11244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 16:28:57.285  INFO 11244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 16:28:57.566  INFO 11244 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:28:57.586  INFO 11244 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-12 16:28:57.854  INFO 11244 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-12 18:08:34.184  INFO 14080 --- [main] com.lyy.note.study.aspectStudy.AopTest   : Starting AopTest on SF0080004198A with PID 14080 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 18:08:34.186  INFO 14080 --- [main] com.lyy.note.study.aspectStudy.AopTest   : No active profile set, falling back to default profiles: default
+2019-11-12 18:08:35.052  INFO 14080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 18:08:35.056  INFO 14080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 18:08:35.099  INFO 14080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
+2019-11-12 18:08:35.551  INFO 14080 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$93229930] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 18:08:37.289  INFO 14080 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 18:08:37.891  INFO 14080 --- [main] com.lyy.note.study.aspectStudy.AopTest   : Started AopTest in 4.037 seconds (JVM running for 5.192)
+2019-11-12 18:08:38.116  INFO 14080 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 18:11:30.306  INFO 15772 --- [main] com.lyy.note.study.aspectStudy.AopTest   : Starting AopTest on SF0080004198A with PID 15772 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 18:11:30.307  INFO 15772 --- [main] com.lyy.note.study.aspectStudy.AopTest   : No active profile set, falling back to default profiles: default
+2019-11-12 18:11:31.159  INFO 15772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 18:11:31.162  INFO 15772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 18:11:31.212  INFO 15772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-11-12 18:11:31.626  INFO 15772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b06fc3f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 18:11:33.362  INFO 15772 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 18:11:33.946  INFO 15772 --- [main] com.lyy.note.study.aspectStudy.AopTest   : Started AopTest in 3.962 seconds (JVM running for 5.052)
+2019-11-12 18:11:34.148  INFO 15772 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 18:15:25.747  INFO 12236 --- [main] com.lyy.note.study.aspectStudy.AopTest   : Starting AopTest on SF0080004198A with PID 12236 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 18:15:25.749  INFO 12236 --- [main] com.lyy.note.study.aspectStudy.AopTest   : No active profile set, falling back to default profiles: default
+2019-11-12 18:15:26.851  INFO 12236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 18:15:26.857  INFO 12236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 18:15:26.906  INFO 12236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-11-12 18:15:27.461  INFO 12236 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f2da523c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 18:15:29.814  INFO 12236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 18:15:30.776  INFO 12236 --- [main] com.lyy.note.study.aspectStudy.AopTest   : Started AopTest in 5.509 seconds (JVM running for 7.126)
+2019-11-12 18:16:40.505  INFO 12236 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 18:18:16.714  INFO 14108 --- [main] com.lyy.note.study.aspectStudy.AopTest   : Starting AopTest on SF0080004198A with PID 14108 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 18:18:16.716  INFO 14108 --- [main] com.lyy.note.study.aspectStudy.AopTest   : No active profile set, falling back to default profiles: default
+2019-11-12 18:18:17.568  INFO 14108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 18:18:17.571  INFO 14108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 18:18:17.620  INFO 14108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 0 repository interfaces.
+2019-11-12 18:18:18.015  INFO 14108 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5fe7b991] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 18:18:19.704  INFO 14108 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 18:18:20.281  INFO 14108 --- [main] com.lyy.note.study.aspectStudy.AopTest   : Started AopTest in 3.895 seconds (JVM running for 4.955)
+2019-11-12 18:18:20.502  INFO 14108 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 18:31:28.202  INFO 13976 --- [main] com.lyy.note.study.aspectStudy.AopTest   : Starting AopTest on SF0080004198A with PID 13976 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 18:31:28.204  INFO 13976 --- [main] com.lyy.note.study.aspectStudy.AopTest   : No active profile set, falling back to default profiles: default
+2019-11-12 18:31:29.092  INFO 13976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 18:31:29.096  INFO 13976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 18:31:29.137  INFO 13976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 repository interfaces.
+2019-11-12 18:31:29.557  INFO 13976 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c644d36b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 18:31:31.294  INFO 13976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 18:31:31.830  INFO 13976 --- [main] com.lyy.note.study.aspectStudy.AopTest   : Started AopTest in 3.968 seconds (JVM running for 5.061)
+2019-11-12 18:31:32.067  INFO 13976 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 19:02:17.626  INFO 16160 --- [main] c.l.n.controller.TestArticleController   : Starting TestArticleController on SF0080004198A with PID 16160 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 19:02:17.628  INFO 16160 --- [main] c.l.n.controller.TestArticleController   : No active profile set, falling back to default profiles: default
+2019-11-12 19:02:18.541  INFO 16160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 19:02:18.545  INFO 16160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 19:02:18.592  INFO 16160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
+2019-11-12 19:02:19.043  INFO 16160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fdc344cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 19:02:20.893  INFO 16160 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 19:02:21.471  INFO 16160 --- [main] c.l.n.controller.TestArticleController   : Started TestArticleController in 4.205 seconds (JVM running for 5.381)
+2019-11-12 19:02:21.688  INFO 16160 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-11-12 19:02:21.688  INFO 16160 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-11-12 19:02:21.689  INFO 16160 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2019-11-12 19:02:21.719  WARN 16160 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-11-12 19:02:21.736  INFO 16160 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 19:08:46.004  INFO 11368 --- [main] c.l.n.controller.TestArticleController   : Starting TestArticleController on SF0080004198A with PID 11368 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 19:08:46.005  INFO 11368 --- [main] c.l.n.controller.TestArticleController   : No active profile set, falling back to default profiles: default
+2019-11-12 19:08:47.018  INFO 11368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 19:08:47.022  INFO 11368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 19:08:47.069  INFO 11368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2019-11-12 19:08:47.586  INFO 11368 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$354cc451] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 19:08:50.042  INFO 11368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 19:08:51.032  INFO 11368 --- [main] c.l.n.controller.TestArticleController   : Started TestArticleController in 5.503 seconds (JVM running for 7.31)
+2019-11-12 19:08:51.365  INFO 11368 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-11-12 19:08:51.365  INFO 11368 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-11-12 19:08:51.366  INFO 11368 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2019-11-12 19:08:51.407  WARN 11368 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-11-12 19:08:51.432  INFO 11368 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-12 19:09:22.319  INFO 8716 --- [main] c.l.n.controller.TestArticleController   : Starting TestArticleController on SF0080004198A with PID 8716 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 19:09:22.322  INFO 8716 --- [main] c.l.n.controller.TestArticleController   : No active profile set, falling back to default profiles: default
+2019-11-12 19:09:23.430  INFO 8716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 19:09:23.435  INFO 8716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 19:09:23.483  INFO 8716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-11-12 19:09:24.069  INFO 8716 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b2b93b73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 19:09:26.563  INFO 8716 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 19:09:27.474  INFO 8716 --- [main] c.l.n.controller.TestArticleController   : Started TestArticleController in 5.649 seconds (JVM running for 7.359)
+2019-11-12 19:09:27.745  INFO 8716 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-11-12 19:09:27.745  INFO 8716 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-11-12 19:09:27.746  INFO 8716 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2019-11-12 19:11:08.721  INFO 11516 --- [main] c.l.n.controller.TestArticleController   : Starting TestArticleController on SF0080004198A with PID 11516 (started by 80004198 in E:\javaMyBlogs\myCloud)
+2019-11-12 19:11:08.723  INFO 11516 --- [main] c.l.n.controller.TestArticleController   : No active profile set, falling back to default profiles: default
+2019-11-12 19:11:09.836  INFO 11516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 19:11:09.840  INFO 11516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 19:11:09.893  INFO 11516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-11-12 19:11:10.472  INFO 11516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$babb33da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 19:11:12.816  INFO 11516 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 19:11:13.727  INFO 11516 --- [main] c.l.n.controller.TestArticleController   : Started TestArticleController in 5.474 seconds (JVM running for 7.149)
+2019-11-12 19:11:14.072  INFO 11516 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-11-12 19:11:14.072  INFO 11516 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-11-12 19:11:14.073  INFO 11516 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2019-11-12 19:12:17.490  INFO 8716 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

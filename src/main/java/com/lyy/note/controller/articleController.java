@@ -70,9 +70,10 @@ public class articleController {
 		return ResponseDTO.buildFailure("网络异常啦");
 	}	
 	/***
-	 * 查询首页文章信息
-	 * @param id 为文章id 为空时表示查询全部
+	 * 查询首页文章信息（添加切面ArticleAspect处理阅读数）
+	 * @param id 为文章id 为空时表示查询全部  
 	 */
+	//TODO 添加showAticle切面
 	@CrossOrigin
 	@RequestMapping(value = "/showAticle",method = RequestMethod.POST)
 	public ResponseDTO<List<ShowArticle>> showAticle(String id) {
@@ -141,7 +142,6 @@ public class articleController {
 		return ResponseDTO.buildSuccess(selectArticleTitle);
 	}
 	
-	//TODO 热门标签
 	/***
 	 * 查找热门标签
 	 * @return

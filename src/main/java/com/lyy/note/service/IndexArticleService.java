@@ -2,8 +2,6 @@ package com.lyy.note.service;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-
 import com.lyy.note.entity.ArticlePageHelperParam;
 import com.lyy.note.entity.Content;
 import com.lyy.note.entity.Tag;
@@ -12,7 +10,6 @@ import com.lyy.note.entity.pojo.ArticleTitle;
 import com.lyy.note.entity.pojo.ShowArticle;
 import com.lyy.note.entity.vo.TagResultVo;
 import com.lyy.note.exception.ActualException;
-import com.lyy.note.util.PageHelper;
 
 /***
  * 展示页文章内容
@@ -64,5 +61,19 @@ public interface IndexArticleService {
 	 * @throws ActualException 
 	 */
 	List<TagResultVo> selectHotLabels() throws ActualException;
+	
+	/***
+	 * 根据id 查询文章阅读数
+	 * @param id 文章id
+	 * @return reading_quantity 阅读数
+	 */
+	Integer selectArticleById(String id);
+	
+	/***
+	 * 根据id更新阅读量
+	 * @throws ActualException 自定义异常
+	 */
+	Boolean updateReadingQuantity(Integer readingQuantity, String id);
+	
 	
 }

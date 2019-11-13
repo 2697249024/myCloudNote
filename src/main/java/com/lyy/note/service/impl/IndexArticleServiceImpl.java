@@ -111,7 +111,7 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 			articleInsertPojo.setPostedId(1);
 			//插入日期即为当前时间
 			Date nowTime = GetTimeUtil.getNowTime();
-			System.out.println(nowTime);
+			log.info("当前时间：[{}]",nowTime);
 			articleInsertPojo.setArticleCreateDate(nowTime);
 			//标签id
 			articleInsertPojo.setArticleTagId(uuid);
@@ -121,6 +121,8 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 			articleInsertPojo.setArticleTitle(editorTitle);
 			articleInsertPojo.setArticleIntro(editorIntro);
 			articleInsertPojo.setArticlePicture(editorPicture);
+			//插入阅读数，新增文章阅读数为0 readingQuantity
+			articleInsertPojo.setReadingQuantity(0);
 			//-------------插入标签id和标签内容------------
 			Tag tag = new Tag();
 			//根据逗号拆分标签字符串
@@ -155,7 +157,6 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 					System.out.println("更新失败");
 					return false;
 				}
-				
 			}
 		return false;
 	}
@@ -209,6 +210,26 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 			log.error("热门标签处理异常",e.getMessage());
 			throw new ActualException("热门标签信息处理异常"); 
 		}
+	}
+	
+	/***
+	 * 更新文章阅读数
+	 * @throws ActualException 自定义异常
+	 */
+	@Override
+	public Boolean updateReadingQuantity(Integer readingQuantity,String id){
+		try {
+			Boolean updateReslult = showArticleMapper.updateReadingQuantity(readingQuantity, id);
+			return updateReslult;
+		} catch (Exception e) {
+			log.error("阅读数更新失败 文章id：[{}],阅读量：[{}]",id,readingQuantity);
+		}
+		return false;
+	}
+	@Override
+	public Integer selectArticleById(String id) {
+		Integer selectArticleById = showArticleMapper.selectArticleById(id);
+		return selectArticleById;
 	}
 }
 
