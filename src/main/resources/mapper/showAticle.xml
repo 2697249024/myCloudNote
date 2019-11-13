@@ -12,12 +12,14 @@
     <result column="articleIntro"  property="articleIntro" />
     <result column="articlePicture" property="articlePicture" />
     <result column="detial" property="detial" />
+    <result column="readingQuantity" property="readingQuantity" />
   </resultMap>
   <!-- 根据日期获取前五条数据 -->
  	<select id="selectIndexArtilce" parameterType="java.lang.String"  resultMap="ShowArticleMap">
  		select ar.id,ar.article_title articleTitle,us.user_name userName,
  		ar.article_create_date articleCreateDate,ta.tag1,ta.tag2,ta.tag3,
- 		ar.article_intro articleIntro,ar.article_picture articlePicture,co.detial detial
+ 		ar.article_intro articleIntro,ar.article_picture articlePicture,
+ 		co.detial detial,ar.reading_quantity readingQuantity
 		from article ar INNER JOIN content co 
 		on ar.article_content_id=co.content_id 
 		INNER JOIN user us on ar.posted_id = us.user_id 
@@ -80,8 +82,8 @@
  	<!-- 插入文章内容 -->
  	
  	<insert id="insertArticle" parameterType="com.lyy.note.entity.pojo.ArticleInsertPojo">
- 	insert into article (id,article_title,article_content_id,posted_id,article_create_date,article_tag_id,article_intro,article_picture)
- 	VALUES (#{id},#{articleTitle},#{articleContentId},#{postedId},#{articleCreateDate},#{articleTagId},#{articleIntro},#{articlePicture});
+ 	insert into article (id,article_title,article_content_id,posted_id,article_create_date,article_tag_id,article_intro,article_picture,reading_quantity)
+ 	VALUES (#{id},#{articleTitle},#{articleContentId},#{postedId},#{articleCreateDate},#{articleTagId},#{articleIntro},#{articlePicture},#{readingQuantity});
  	</insert>
  	
  	<!-- 插入标签内容 -->

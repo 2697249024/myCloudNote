@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 public class TestService {
 	
 	public String test(String message) {
+		System.out.println("1112321");
 		return "TestService ->test:"+message ;
 	}
 }

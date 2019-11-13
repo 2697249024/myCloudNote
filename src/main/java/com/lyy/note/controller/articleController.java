@@ -70,7 +70,7 @@ public class articleController {
 		return ResponseDTO.buildFailure("网络异常啦");
 	}	
 	/***
-	 * 查询首页文章信息（添加切面）
+	 * 查询首页文章信息（添加切面ArticleAspect处理阅读数）
 	 * @param id 为文章id 为空时表示查询全部  
 	 */
 	//TODO 添加showAticle切面

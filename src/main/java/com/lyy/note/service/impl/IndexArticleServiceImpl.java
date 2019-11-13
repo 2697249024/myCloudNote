@@ -111,7 +111,7 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 			articleInsertPojo.setPostedId(1);
 			//插入日期即为当前时间
 			Date nowTime = GetTimeUtil.getNowTime();
-			System.out.println(nowTime);
+			log.info("当前时间：[{}]",nowTime);
 			articleInsertPojo.setArticleCreateDate(nowTime);
 			//标签id
 			articleInsertPojo.setArticleTagId(uuid);
@@ -121,6 +121,8 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 			articleInsertPojo.setArticleTitle(editorTitle);
 			articleInsertPojo.setArticleIntro(editorIntro);
 			articleInsertPojo.setArticlePicture(editorPicture);
+			//插入阅读数，新增文章阅读数为0 readingQuantity
+			articleInsertPojo.setReadingQuantity(0);
 			//-------------插入标签id和标签内容------------
 			Tag tag = new Tag();
 			//根据逗号拆分标签字符串
