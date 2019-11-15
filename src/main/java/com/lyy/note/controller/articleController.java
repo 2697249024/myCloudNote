@@ -26,12 +26,18 @@ import com.lyy.note.service.impl.IndexArticleServiceImpl;
 import com.lyy.note.service.impl.NoticeServiceImpl;
 import com.lyy.note.util.PageHelper;
 import com.lyy.note.vo.ResponseDTO;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
+
 /***
  * 文章控制层
  * @author 80004198
  *
  */
 @RestController
+@Api(value = "文章相关业务的接口",tags = {"文章相关业务的controller"})
 public class articleController {
 	@Autowired
 	IndexArticleService indexArticleService;
@@ -73,6 +79,10 @@ public class articleController {
 	 * 查询首页文章信息（添加切面ArticleAspect处理阅读数）
 	 * @param id 为文章id 为空时表示查询全部  
 	 */
+	
+	
+	@ApiOperation(value = " 查询首页文章信息",notes = "查询首页文章信息（添加切面ArticleAspect处理阅读数）")
+	@ApiImplicitParam(name="id",value = "文章主键id",required = false,dataType = "String",paramType ="form")
 	//TODO 添加showAticle切面
 	@CrossOrigin
 	@RequestMapping(value = "/showAticle",method = RequestMethod.POST)
