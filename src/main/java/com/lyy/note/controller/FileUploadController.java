@@ -58,6 +58,7 @@ public class FileUploadController {
 			//String path = "E:/fileadress/picture/";
 			//String FilePath =path+OldFileName;
 			// Linux系统
+			//TODO 添加路径区分
 			String FilePath = "/cloudResoure/picture/jpg/"+OldFileName;
 			log.info("上传路径："+FilePath);
 			System.out.println("FilePath:"+FilePath);

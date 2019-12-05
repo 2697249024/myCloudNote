@@ -83,7 +83,6 @@ public class articleController {
 	
 	@ApiOperation(value = " 查询首页文章信息",notes = "查询首页文章信息（添加切面ArticleAspect处理阅读数）")
 	@ApiImplicitParam(name="id",value = "文章主键id",required = false,dataType = "String",paramType ="form")
-	//TODO 添加showAticle切面
 	@CrossOrigin
 	@RequestMapping(value = "/showAticle",method = RequestMethod.POST)
 	public ResponseDTO<List<ShowArticle>> showAticle(String id) {
