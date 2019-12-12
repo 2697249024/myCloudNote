@@ -45,7 +45,8 @@ http{
 	}
 	
 	
-#云文件储存地址 例如： http://49.234.219.75:666/picture/jpg/Chrysanthemum.jpg	
+#云文件储存地址 例如： http://49.234.219.75:666/picture/jpg/ali.gif 或 www.yueyangcloud.cn:666/picture/jpg/ali.gif
+# 文件地址  http://www.yueyangcloud.cn:666/uploadedFile/stream.txt			   
 	 server {
 
                 listen    666; #侦听80端口,并为默认服务,default_server只能有一个

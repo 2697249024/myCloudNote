@@ -38,6 +38,8 @@ public class SaveImgUnit {
         if (type.equals("zip")){
         	imageFile = imageFile.replaceAll("data:image/zip;base64,", "");
         }
+        //TODO 添加文件 并区分
+        //xlsx  doc docx  txt  pdf
         BASE64Decoder decoder = new BASE64Decoder();
         // Base64解码
         byte[] imageByte = null;
