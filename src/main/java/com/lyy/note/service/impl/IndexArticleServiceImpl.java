@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -22,6 +23,7 @@ import com.lyy.note.entity.Tag;
 import com.lyy.note.entity.pojo.ArticleInsertPojo;
 import com.lyy.note.entity.pojo.ArticleTitle;
 import com.lyy.note.entity.pojo.ShowArticle;
+import com.lyy.note.entity.vo.SearchResultVo;
 import com.lyy.note.entity.vo.TagResultVo;
 import com.lyy.note.exception.ActualException;
 import com.lyy.note.service.IndexArticleService;
@@ -230,6 +232,30 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 	public Integer selectArticleById(String id) {
 		Integer selectArticleById = showArticleMapper.selectArticleById(id);
 		return selectArticleById;
+	}
+	
+	@Override
+	public List<SearchResultVo> searchArticle(String articleTitle) throws ActualException {
+		//查询文章标题与标签
+		List<SearchResultVo> searchArticle = showArticleMapper.searchArticle();
+		if(searchArticle.isEmpty() || searchArticle == null) {
+			log.info("无内容");
+			throw new ActualException("搜索无内容");
+		}
+		searchArticle.removeIf(re-> !re.getSearchResult().contains(articleTitle));
+//		
+//		searchArticle.forEach(System.out::println);
+//		Map<Boolean, List<SearchResultVo>> collect = searchArticle.stream().collect(Collectors.partitioningBy(re-> re.getSearchResult().contains(articleTitle)));
+//		collect.get(true);
+		
+//		List<SearchResultVo> articleResult = new ArrayList<SearchResultVo>();
+//		for (int i = 0; i < searchArticle.size(); i++) {
+//			//如果包含articleTitle 则返回此对象
+//			if(searchArticle.get(i).getSearchResult().contains(articleTitle)) {
+//				articleResult.add(searchArticle.get(i));
+//			}
+//		}
+		return searchArticle;
 	}
 }
 

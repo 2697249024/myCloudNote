@@ -8,6 +8,7 @@ import com.lyy.note.entity.Tag;
 import com.lyy.note.entity.pojo.ArticleInsertPojo;
 import com.lyy.note.entity.pojo.ArticleTitle;
 import com.lyy.note.entity.pojo.ShowArticle;
+import com.lyy.note.entity.vo.SearchResultVo;
 import com.lyy.note.entity.vo.TagResultVo;
 import com.lyy.note.exception.ActualException;
 
@@ -71,9 +72,15 @@ public interface IndexArticleService {
 	
 	/***
 	 * 根据id更新阅读量
-	 * @throws ActualException 自定义异常
 	 */
 	Boolean updateReadingQuantity(Integer readingQuantity, String id);
 	
+	/***
+	 * 搜索文章
+	 * @param articleTitle
+	 * @return 文章id集合
+	 * @throws ActualException 
+	 */
+	List<SearchResultVo> searchArticle(String articleTitle) throws ActualException;
 	
 }

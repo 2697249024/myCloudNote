@@ -11,6 +11,7 @@ import com.lyy.note.entity.Tag;
 import com.lyy.note.entity.pojo.ArticleInsertPojo;
 import com.lyy.note.entity.pojo.ArticleTitle;
 import com.lyy.note.entity.pojo.ShowArticle;
+import com.lyy.note.entity.vo.SearchResultVo;
 
 @Mapper
 public interface ShowArticleMapper {
@@ -59,4 +60,12 @@ public interface ShowArticleMapper {
 	 * 更新文章阅读数
 	 */
 	Boolean updateReadingQuantity(@Param("readingQuantity")Integer readingQuantity,@Param("id") String id);
+	
+	/***
+	 * 搜索文章
+	 * @param articleTitle
+	 * @return 文章id集合
+	 */
+	List<SearchResultVo> searchArticle();
+	
 }
