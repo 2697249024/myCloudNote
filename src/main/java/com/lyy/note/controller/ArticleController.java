@@ -39,6 +39,7 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @Api(value = "文章相关业务的接口",tags = {"文章相关业务的controller"})
 public class ArticleController {
+	
 	@Autowired
 	IndexArticleService indexArticleService;
 	
