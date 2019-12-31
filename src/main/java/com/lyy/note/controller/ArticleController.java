@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lyy.note.entity.ArticlePageHelperParam;
 import com.lyy.note.entity.pojo.ArticleTitle;
 import com.lyy.note.entity.pojo.ShowArticle;
+import com.lyy.note.entity.vo.SearchResultVo;
 import com.lyy.note.entity.vo.TagResultVo;
 import com.lyy.note.exception.ActualException;
 import com.lyy.note.service.IndexArticleService;
@@ -39,6 +40,7 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @Api(value = "文章相关业务的接口",tags = {"文章相关业务的controller"})
 public class ArticleController {
+	
 	@Autowired
 	IndexArticleService indexArticleService;
 	
@@ -177,5 +179,32 @@ public class ArticleController {
 			return ResponseDTO.buildFailure("热门标签计算异常");
 		}
 	}
+	
+	/***
+	 * 搜索功能
+	 * @return 文章列表
+	 */
+	//TODO 搜索功能开发中，，，
+	@RequestMapping(value = "/searchArticle",method = RequestMethod.POST)
+	public ResponseDTO<List<SearchResultVo>> searchArticle(String articleTitle) {
+		try {
+			
+			List<SearchResultVo> searchArticle = indexArticleService.searchArticle(articleTitle);
+			return ResponseDTO.buildSuccess(searchArticle);
+			
+		} catch (Exception e) {
+			if(e instanceof ActualException) {
+				return ResponseDTO.buildFailure(e.getMessage());	 
+			}
+			return ResponseDTO.buildFailure("网络异常，搜索失败");
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 }

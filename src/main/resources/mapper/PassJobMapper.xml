@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyy.note.study.workStudy.mapper.PassJobMapper">
+  <resultMap id="BaseResultMap" type="com.lyy.note.study.workStudy.po.PassModelJobPo">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="job_name" jdbcType="VARCHAR" property="jobName" />
+    <result column="publish_date" jdbcType="TIMESTAMP" property="publishDate" />
+    <result column="expire_date" jdbcType="TIMESTAMP" property="expireDate" />
+    <result column="is_email" jdbcType="INTEGER" property="isEmail" />
+    <result column="is_expire_email" jdbcType="INTEGER" property="isExpireEmail" />
+    <result column="is_publish" jdbcType="INTEGER" property="isPublish" />
+    <result column="job_status" jdbcType="INTEGER" property="jobStatus" />
+    <result column="job_assess_status" jdbcType="INTEGER" property="jobAssessStatus" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="total_lines" jdbcType="INTEGER" property="totalLines" />
+    <result column="total_areacodes" jdbcType="INTEGER" property="totalAreacodes" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
+    <result column="create_tm" jdbcType="TIMESTAMP" property="createTm" />
+    <result column="modifyor" jdbcType="VARCHAR" property="modifyor" />
+    <result column="modifyor_name" jdbcType="VARCHAR" property="modifyorName" />
+    <result column="modify_tm" jdbcType="TIMESTAMP" property="modifyTm" />
+    <result column="task_id" jdbcType="BIGINT" property="taskId" />
+    <result column="task_belong" jdbcType="VARCHAR" property="taskBelong" />
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+    id, job_name, publish_date, expire_date, is_email, is_expire_email, is_publish, job_status, 
+    job_assess_status, remark, total_lines, total_areacodes, creator, creator_name, create_tm, 
+    modifyor, modifyor_name, modify_tm, task_id, task_belong
+  </sql>
+ 
+	 <select id="getJob" resultMap="BaseResultMap">
+	 
+	 select <include refid="Base_Column_List"/> 
+	 from pass_sys_model_job
+	 
+	 </select>
+ 
+
+</mapper>

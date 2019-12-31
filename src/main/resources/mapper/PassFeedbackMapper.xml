@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyy.note.study.workStudy.mapper.PassFeedbackMapper">
+  <resultMap id="BaseResultMap" type="com.lyy.note.study.workStudy.po.PassFeedbackPo">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="pid" jdbcType="BIGINT" property="pid" />
+    <result column="process_id" jdbcType="BIGINT" property="processId" />
+    <result column="line_code" jdbcType="VARCHAR" property="lineCode" />
+    <result column="assess_status" jdbcType="INTEGER" property="assessStatus" />
+    <result column="is_feedback_self" jdbcType="INTEGER" property="isFeedbackSelf" />
+    <result column="is_exec" jdbcType="INTEGER" property="isExec" />
+    <result column="is_follow_task" jdbcType="INTEGER" property="isFollowTask" />
+    <result column="exec_date" jdbcType="VARCHAR" property="execDate" />
+    <result column="replace_task" jdbcType="VARCHAR" property="replaceTask" />
+    <result column="unexec_reason" jdbcType="VARCHAR" property="unexecReason" />
+    <result column="unexec_reason_desc" jdbcType="VARCHAR" property="unexecReasonDesc" />
+    <result column="optimize_way" jdbcType="VARCHAR" property="optimizeWay" />
+    <result column="optimize_label" jdbcType="VARCHAR" property="optimizeLabel" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
+    <result column="create_tm" jdbcType="TIMESTAMP" property="createTm" />
+    <result column="modifyor" jdbcType="VARCHAR" property="modifyor" />
+    <result column="modifyor_name" jdbcType="VARCHAR" property="modifyorName" />
+    <result column="modify_tm" jdbcType="TIMESTAMP" property="modifyTm" />
+    <result column="publish_date" jdbcType="TIMESTAMP" property="publishDate" />
+    <result column="expire_date" jdbcType="TIMESTAMP" property="expireDate" />
+    <result column="task_belong" jdbcType="VARCHAR" property="taskBelong" />
+    <result column="line_area_belong" jdbcType="VARCHAR" property="lineAreaBelong" />
+  </resultMap>
+ 
+  <sql id="Base_Column_List">
+    id, pid, process_id, line_code, assess_status, is_feedback_self, is_exec, is_follow_task, 
+    exec_date, replace_task, unexec_reason, unexec_reason_desc, optimize_way, optimize_label, 
+    creator, creator_name, create_tm, modifyor, modifyor_name, modify_tm, publish_date, 
+    expire_date, task_belong, line_area_belong
+  </sql>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</mapper>

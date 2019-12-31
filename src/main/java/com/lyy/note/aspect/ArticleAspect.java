@@ -19,7 +19,7 @@ public class ArticleAspect {
 	@Autowired
 	IndexArticleService indexArticleService;
 	
-	 private final String POINT_CUT = "execution(* com.lyy.note.controller.articleController.showAticle(..))";
+	 private final String POINT_CUT = "execution(* com.lyy.note.controller.ArticleController.showAticle(..))";
 	/**
 	 * 添加切面：查询首页文章信息  @Around 环绕通知   切点-> ProceedingJoinPoint  proceedingJoinPoint.proceed(); //返回原方法 --> 继续执行环绕
 	 * @throws ActualException 
