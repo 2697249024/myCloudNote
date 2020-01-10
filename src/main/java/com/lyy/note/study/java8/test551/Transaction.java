@@ -5,6 +5,7 @@ public class Transaction {
 	
 	private final int year;
 	
+	/**交易额*/
 	private final int value;
 
 	public Transaction(Trader trader, int year, int value) {

@@ -111,5 +111,15 @@
  		UPDATE article set reading_quantity = #{readingQuantity} where id = #{id}
  	</update>
  	
+ 	<!-- 搜索文章内容 -->
+ 	<select id="searchArticle" resultType ="com.lyy.note.entity.vo.SearchResultVo">
+ 		select 
+			a.id,
+			a.article_title,t.tag1,t.tag2,t.tag3 
+			from article a 
+			LEFT JOIN tag t on a.article_tag_id = t.tag_id
+ 	</select>
+ 	
+ 	
        
 </mapper>
