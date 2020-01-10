@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -242,20 +243,23 @@ public class IndexArticleServiceImpl implements IndexArticleService {
 			log.info("无内容");
 			throw new ActualException("搜索无内容");
 		}
-		searchArticle.removeIf(re-> !re.getSearchResult().contains(articleTitle));
+	//	searchArticle.removeIf(re-> !re.getSearchResult().contains(articleTitle));
+		
+		
 //		
 //		searchArticle.forEach(System.out::println);
-//		Map<Boolean, List<SearchResultVo>> collect = searchArticle.stream().collect(Collectors.partitioningBy(re-> re.getSearchResult().contains(articleTitle)));
-//		collect.get(true);
+		Map<Boolean, List<SearchResultVo>> collect = searchArticle.stream().collect(Collectors.partitioningBy(re-> re.getSearchResult().contains(articleTitle)));
+		List<SearchResultVo> searchResult= collect.get(true);
 		
 //		List<SearchResultVo> articleResult = new ArrayList<SearchResultVo>();
+//		
 //		for (int i = 0; i < searchArticle.size(); i++) {
 //			//如果包含articleTitle 则返回此对象
 //			if(searchArticle.get(i).getSearchResult().contains(articleTitle)) {
 //				articleResult.add(searchArticle.get(i));
 //			}
 //		}
-		return searchArticle;
+		return searchResult;
 	}
 }
 
