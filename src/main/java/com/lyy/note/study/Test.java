@@ -18,6 +18,16 @@ public class Test {
 			List<String> changeDateExclusiveWednesdayAfter1 = ChangeDateUtil.ChangeDateExclusiveWednesdayAfter1("167", 1);
 			System.out.println(changeDateExclusiveWednesdayAfter1.toString());
 			
+			String r = "qwqss%";
+			String a ="";
+			for (int i = 0; i < r.length(); i++) {
+				String v= String.valueOf(r.charAt(i));
+				if(!v.equals("%")) {
+					 a += v;
+				};
+				
+			}
+			System.out.println(a);
 			
 //			List<String> a1 = new ArrayList<String>();
 //			a1.add("a");
