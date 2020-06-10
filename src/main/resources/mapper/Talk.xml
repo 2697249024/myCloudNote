@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyy.note.dao.TalkMapper">
+ 
+  <!-- 分页查询全部说说 -->
+ 	<select id="selectTalk"  resultType="com.lyy.note.entity.Talk" parameterType="java.lang.Integer" >
+ 		select talk_id talkId,details,create_date createDate,comment_id commentId,talk_status talkStatus
+		from talk
+		where talk_status = 0
+		limit #{currentPage},#{pageSize};
+ 	</select>
+ 	
+       
+</mapper>

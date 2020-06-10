@@ -94,8 +94,8 @@ public class NoticeController {
 					redisTemplate.opsForValue().set("selectaAllNotice", selectaAllNotice, 5, TimeUnit.MINUTES);
 					return ResponseDTO.buildSuccessMsg(selectaAllNotice, ResponseEumn.SUCCESS.getDesc());
 				} catch (Exception e) {
-					log.error("selectaAllNotice----> redis异常");
-					e.printStackTrace();
+					log.error("selectaAllNotice----> redis异常",e);
+					return ResponseDTO.buildFailure("redis缓存异常");
 				}
 			}
 			//查询结果为null 返回错误

@@ -103,12 +103,29 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>	
-        <!-- rabbitMQ -->
+        <!-- kafka -->
         <dependency>
-	<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-amqp</artifactId>
-		<version>1.5.2.RELEASE</version>
-	</dependency>
+		    <groupId>org.springframework.kafka</groupId>
+		   <artifactId>spring-kafka</artifactId>
+		</dependency>
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+			<version>1.5.2.RELEASE</version>
+		</dependency>
+		<!-- feign -->
+		<dependency>
+		    <groupId>com.netflix.feign</groupId>
+		    <artifactId>feign-core</artifactId>
+		    <version>8.18.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>1.2.62</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
