@@ -53,7 +53,10 @@ logging:
     org.hibernate: error
   file: log/server.log  
 
-
+#服务器地址
+product:
+  url: http://localhost:8080
+ # url: http://49.234.219.75:8080
  
   
   
