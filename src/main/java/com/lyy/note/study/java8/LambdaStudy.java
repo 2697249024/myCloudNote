@@ -17,12 +17,13 @@ public class LambdaStudy {
 	
 	
 	public static void main(String[] args) {
-		
+
+
 		//List<Integer> intList = Arrays.asList(1,2,3);
 //		//变成一倍
 //		List<Integer> collect = intList.stream().map(e ->
 //			e = e * e
-//			
+//
 //		).collect(Collectors.toList());
 		
 		//List<Integer> collect = intList.stream().map( e -> e * e ).collect(Collectors.toList());
