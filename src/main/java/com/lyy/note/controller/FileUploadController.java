@@ -72,7 +72,7 @@ public class FileUploadController {
 				}
 		}
 		return LayUiResponseDTO.buildSuccess("");
-}
+	}
 	
 	//editor 图片上传
 	

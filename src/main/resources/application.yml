@@ -28,7 +28,16 @@ spring:
 #kafka
   kafka:
      bootstrap-servers: 49.234.219.75:9092
-     producer:      key-serializer: org.apache.kafka.common.serialization.StringSerializer      value-serializer: org.apache.kafka.common.serialization.StringSerializer     consumer:      group-id: test      enable-auto-commit: true      auto-commit-interval: 1000      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer          
+     producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+     consumer:
+      group-id: test
+      enable-auto-commit: true
+      auto-commit-interval: 1000
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+          
 #mybatis 配置
 # 配置映射文件加载   
 mybatis:
@@ -44,14 +53,13 @@ multipart:
 # 自定义文件上传路径
 web:
   uploadImgPath: fileadress/file  #图片传输地址(目前文件图片放一个位置)
- 
 
+
+  #读取日志配置文件
 logging:
-  level:
-    xatu.zsl: debug #不同目录下的日志可配置不同级别
-    org.springfromework.web: info
-    org.hibernate: error
-  file: log/server.log  
+  config: classpath:logback-spring.xml
+  #日志输出路径
+  path: log
 
 #服务器地址
 product:
