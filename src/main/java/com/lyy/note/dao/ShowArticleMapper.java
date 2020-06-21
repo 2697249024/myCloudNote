@@ -12,8 +12,10 @@ import com.lyy.note.entity.pojo.ArticleInsertPojo;
 import com.lyy.note.entity.pojo.ArticleTitle;
 import com.lyy.note.entity.pojo.ShowArticle;
 import com.lyy.note.entity.vo.SearchResultVo;
+import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface ShowArticleMapper {
 	
 	/***

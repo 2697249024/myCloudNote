@@ -6,11 +6,13 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.lyy.note.entity.User;
+import org.springframework.stereotype.Repository;
 
 /**
  * 用户
  */
 @Mapper
+@Repository
 public interface LoginMapper {
 	//查询所有用户
 	List<User> selectAllUser();

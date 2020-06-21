@@ -1,5 +1,15 @@
 package com.lyy.note.util;
 
+import com.lyy.note.entity.pojo.FileImport;
+import com.lyy.note.eumns.ValidAndStatusEumn;
+import com.lyy.note.service.FileImportService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import sun.misc.BASE64Decoder;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -10,15 +20,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import org.springframework.web.multipart.MultipartFile;
-
-import sun.misc.BASE64Decoder;
-
 /*
  **author:liuyueyang
  *上传图片工具类
  */
 public class SaveImgUnit {
+
+    @Autowired
+    FileImportService fileImportService;
+
+    private static final Logger log = LoggerFactory.getLogger(SaveImgUnit.class);
     //以base64编码格式上传，将照片转成字节流
     public static Map<String,String> getImg(String imageFile,String subdirectory){
         // 通过base64来转化图片
@@ -83,14 +94,14 @@ public class SaveImgUnit {
             map.put("url",files);
             return map;
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("saveImg error",e.getMessage());
             map.put("res","error");
             return map;
         }
     }
 
     //以MultipartFile方式上传到服务器
-    public static Map<String,String> saveMultFile(MultipartFile file,String subdirectory){
+    public Map<String,String> saveMultFile(MultipartFile file,String subdirectory){
         //上传文件路径
         String path = GetServerRealPathUnit.getPath(subdirectory);
         //重新修改文件名防止重名
@@ -116,17 +127,36 @@ public class SaveImgUnit {
             map.put("realPath", path);
             //访问路径
             map.put("path", File.separator+subdirectory+ File.separator+filename);
-            System.out.println("realPath真实路径："+path);
-            System.out.println("path访问路径："+ File.separator+subdirectory+ File.separator+filename);
-            System.out.println("oldName原名："+file.getOriginalFilename());
-            System.out.println("newName新名字："+filename);
-            
+            log.info("realPath真实路径：{}",path);
+            log.info("path访问路径：：{}",File.separator+subdirectory+ File.separator+filename);
+            log.info("oldName原名：{}",file.getOriginalFilename());
+            log.info("newName新名字：{}",filename);
+            fileImport(file, subdirectory, filename);
+            //System.out.println("realPath真实路径："+path);
+            //System.out.println("path访问路径："+ File.separator+subdirectory+ File.separator+filename);
+            //System.out.println("oldName原名："+file.getOriginalFilename());
+            //System.out.println("newName新名字："+filename);
             return map;
         } catch (IOException e) {
+            log.error("saveMultFile error",e.getMessage());
             map.put("res","error");
-            e.printStackTrace();
+            //e.printStackTrace();
             return map;
         }
+    }
+
+    private void fileImport(MultipartFile file, String subdirectory, String filename) {
+        FileImport fileImport = new FileImport();
+        fileImport.setOldName(file.getOriginalFilename());
+        fileImport.setNewName(filename);
+        fileImport.setVisitFileUrl(File.separator+subdirectory+ File.separator+filename);
+        fileImport.setCreateTm(GetTimeUtil.getNowTime());
+        //TODO 上传文件创建者,类型
+        //fileImport.setFileType("jpg");
+        //fileImport.setCreatUser();
+        fileImport.setValid(ValidAndStatusEumn.IS_VALID.getCode());
+        fileImport.setStatus(ValidAndStatusEumn.HAS_HANDLEED.getCode());
+        fileImportService.insertSelective(fileImport);
     }
 }
 

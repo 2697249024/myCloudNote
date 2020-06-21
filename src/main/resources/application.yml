@@ -60,6 +60,8 @@ logging:
   config: classpath:logback-spring.xml
   #日志输出路径
   path: log
+  level:
+    com.lyy.note.dao: debug
 
 #服务器地址
 product:

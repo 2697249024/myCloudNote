@@ -6,8 +6,10 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.lyy.note.entity.Talk;
+import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface TalkMapper {
 
 	/***

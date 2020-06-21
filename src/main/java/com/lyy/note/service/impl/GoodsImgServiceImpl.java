@@ -38,7 +38,8 @@ public class GoodsImgServiceImpl implements GoodsImgService {
     public Map<String,String> uploadGoodsImg(MultipartFile file){
         if (file != null){
             //上传文件
-            Map<String,String> map = SaveImgUnit.saveMultFile(file,GOODS_IMG_PATH);
+            SaveImgUnit saveImgUnit = new SaveImgUnit();
+            Map<String,String> map = saveImgUnit.saveMultFile(file,GOODS_IMG_PATH);
             return map;
         }else {
             Map<String,String> map = new HashMap<>();
@@ -81,6 +82,16 @@ public class GoodsImgServiceImpl implements GoodsImgService {
             if (type.equals("zip")){
             	response.setContentType("image/zip");
             }
+            if (type.equals("txt")){
+            	response.setContentType("image/txt");
+            }
+            if (type.equals("doc")){
+            	response.setContentType("image/doc");
+            }
+            if (type.equals("exe")){
+            	response.setContentType("image/exe");
+            }
+
             out = response.getOutputStream();
             //读取文件流
             int len = 0;
@@ -97,7 +108,7 @@ public class GoodsImgServiceImpl implements GoodsImgService {
 				ips.close();
 			} catch (IOException e) {
 				log.error("保存在服务器出错",e);
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
             
         }

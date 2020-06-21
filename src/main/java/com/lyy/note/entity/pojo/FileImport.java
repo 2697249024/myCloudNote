@@ -4,35 +4,28 @@ import java.util.Date;
 
 public class FileImport {
     private Long id;
-    /**原文件名*/
+
     private String oldName;
 
-    /**新文件名*/
     private String newName;
 
-    /**文件访问地址*/
-    private String fileUrl;
+    private String visitFileUrl;
 
-    /**创建时间*/
     private Date createTm;
 
-    /**文件类型*/
     private String fileType;
 
-    /**创建者*/
     private String creatUser;
 
-    /**删除者*/
     private String deleteUser;
 
-    /**删除时间*/
     private Date deleteTime;
 
-    /**是否有效:无效0，有效1*/
-    private Byte valid;
+    private Integer valid;
 
-    /**导入状态，101-未处理，1-处理中，2-处理完成，4-异常，5-已删除*/
-    private Byte status;
+    private Integer status;
+
+    private String realFileUrl;
 
     public Long getId() {
         return id;
@@ -58,12 +51,12 @@ public class FileImport {
         this.newName = newName == null ? null : newName.trim();
     }
 
-    public String getFileUrl() {
-        return fileUrl;
+    public String getVisitFileUrl() {
+        return visitFileUrl;
     }
 
-    public void setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl == null ? null : fileUrl.trim();
+    public void setVisitFileUrl(String visitFileUrl) {
+        this.visitFileUrl = visitFileUrl == null ? null : visitFileUrl.trim();
     }
 
     public Date getCreateTm() {
@@ -106,19 +99,27 @@ public class FileImport {
         this.deleteTime = deleteTime;
     }
 
-    public Byte getValid() {
+    public Integer getValid() {
         return valid;
     }
 
-    public void setValid(Byte valid) {
+    public void setValid(Integer valid) {
         this.valid = valid;
     }
 
-    public Byte getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(Byte status) {
+    public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public String getRealFileUrl() {
+        return realFileUrl;
+    }
+
+    public void setRealFileUrl(String realFileUrl) {
+        this.realFileUrl = realFileUrl == null ? null : realFileUrl.trim();
     }
 }

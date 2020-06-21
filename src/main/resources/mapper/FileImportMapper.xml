@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyy.note.dao.FileImportMapper">
+  <resultMap id="BaseResultMap" type="com.lyy.note.entity.pojo.FileImport">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="old_name" jdbcType="VARCHAR" property="oldName" />
+    <result column="new_name" jdbcType="VARCHAR" property="newName" />
+    <result column="visit_file_url" jdbcType="VARCHAR" property="visitFileUrl" />
+    <result column="create_tm" jdbcType="TIMESTAMP" property="createTm" />
+    <result column="file_type" jdbcType="VARCHAR" property="fileType" />
+    <result column="creat_user" jdbcType="VARCHAR" property="creatUser" />
+    <result column="delete_user" jdbcType="VARCHAR" property="deleteUser" />
+    <result column="delete_time" jdbcType="TIMESTAMP" property="deleteTime" />
+    <result column="valid" jdbcType="INTEGER" property="valid" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="real_file_url" jdbcType="VARCHAR" property="realFileUrl" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List">
+    id, old_name, new_name, visit_file_url, create_tm, file_type, creat_user, delete_user,
+    delete_time, valid, status, real_file_url
+  </sql>
+
+
+  <insert id="insertSelective" parameterType="com.lyy.note.entity.pojo.FileImport">
+    insert into file_import
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="oldName != null">
+        old_name,
+      </if>
+      <if test="newName != null">
+        new_name,
+      </if>
+      <if test="visitFileUrl != null">
+        visit_file_url,
+      </if>
+      <if test="createTm != null">
+        create_tm,
+      </if>
+      <if test="fileType != null">
+        file_type,
+      </if>
+      <if test="creatUser != null">
+        creat_user,
+      </if>
+      <if test="deleteUser != null">
+        delete_user,
+      </if>
+      <if test="deleteTime != null">
+        delete_time,
+      </if>
+      <if test="valid != null">
+        valid,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="realFileUrl != null">
+        real_file_url,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="oldName != null">
+        #{oldName,jdbcType=VARCHAR},
+      </if>
+      <if test="newName != null">
+        #{newName,jdbcType=VARCHAR},
+      </if>
+      <if test="visitFileUrl != null">
+        #{visitFileUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="createTm != null">
+        #{createTm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fileType != null">
+        #{fileType,jdbcType=VARCHAR},
+      </if>
+      <if test="creatUser != null">
+        #{creatUser,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteUser != null">
+        #{deleteUser,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteTime != null">
+        #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="valid != null">
+        #{valid,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="realFileUrl != null">
+        #{realFileUrl,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+
+
+</mapper>

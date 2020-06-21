@@ -5,8 +5,10 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.lyy.note.entity.Notice;
+import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface NoticeMapper {
 	
 	/**根据类型请求
