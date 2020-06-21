@@ -11,21 +11,28 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.lyy.note.dao.FileImportMapper;
+import com.lyy.note.entity.pojo.FileImport;
+import com.lyy.note.eumns.ValidAndStatusEumn;
 import com.lyy.note.service.GoodsImgService;
 import com.lyy.note.util.GetServerRealPathUnit;
+import com.lyy.note.util.GetTimeUtil;
 import com.lyy.note.util.SaveImgUnit;
 
 /**
- **author:weijiakun
+ **author:lyy
  */
 @Service(value = "goodsImgService")
 public class GoodsImgServiceImpl implements GoodsImgService {
     private static final Logger log = LoggerFactory.getLogger(GoodsImgServiceImpl.class); 
 	
+    @Autowired
+    FileImportMapper fileImportMapper;
 	//注入配置文件application.yml中设置的图片存放子目录名
     @Value("${web.uploadImgPath}")
     private String GOODS_IMG_PATH;
@@ -38,14 +45,30 @@ public class GoodsImgServiceImpl implements GoodsImgService {
     public Map<String,String> uploadGoodsImg(MultipartFile file){
         if (file != null){
             //上传文件
-            SaveImgUnit saveImgUnit = new SaveImgUnit();
-            Map<String,String> map = saveImgUnit.saveMultFile(file,GOODS_IMG_PATH);
+            Map<String,String> map = SaveImgUnit.saveMultFile(file,GOODS_IMG_PATH);
+           //插入数据库
+            fileImport(map,GOODS_IMG_PATH);
             return map;
         }else {
             Map<String,String> map = new HashMap<>();
             map.put("res","error");
             return map;
         }
+    }
+    
+    private void fileImport(Map<String,String> map, String subdirectory) {
+        FileImport fileImport = new FileImport();
+        fileImport.setOldName(map.get("oldName"));
+        fileImport.setNewName(map.get("newName"));
+        fileImport.setVisitFileUrl(map.get("path"));
+        fileImport.setRealFileUrl(map.get("realPath"));
+        fileImport.setCreateTm(GetTimeUtil.getNowTime());
+        //TODO 上传文件创建者,类型
+        //fileImport.setFileType("jpg");
+        //fileImport.setCreatUser();
+        fileImport.setValid(ValidAndStatusEumn.IS_VALID.getCode());
+        fileImport.setStatus(ValidAndStatusEumn.HAS_HANDLEED.getCode());
+        fileImportMapper.insertSelective(fileImport);
     }
 
     /**

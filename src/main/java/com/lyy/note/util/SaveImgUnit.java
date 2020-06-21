@@ -6,6 +6,7 @@ import com.lyy.note.service.FileImportService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import sun.misc.BASE64Decoder;
@@ -24,10 +25,8 @@ import java.util.Random;
  **author:liuyueyang
  *上传图片工具类
  */
+@Component
 public class SaveImgUnit {
-
-    @Autowired
-    FileImportService fileImportService;
 
     private static final Logger log = LoggerFactory.getLogger(SaveImgUnit.class);
     //以base64编码格式上传，将照片转成字节流
@@ -101,7 +100,7 @@ public class SaveImgUnit {
     }
 
     //以MultipartFile方式上传到服务器
-    public Map<String,String> saveMultFile(MultipartFile file,String subdirectory){
+    public static Map<String,String> saveMultFile(MultipartFile file,String subdirectory){
         //上传文件路径
         String path = GetServerRealPathUnit.getPath(subdirectory);
         //重新修改文件名防止重名
@@ -131,7 +130,6 @@ public class SaveImgUnit {
             log.info("path访问路径：：{}",File.separator+subdirectory+ File.separator+filename);
             log.info("oldName原名：{}",file.getOriginalFilename());
             log.info("newName新名字：{}",filename);
-            fileImport(file, subdirectory, filename);
             //System.out.println("realPath真实路径："+path);
             //System.out.println("path访问路径："+ File.separator+subdirectory+ File.separator+filename);
             //System.out.println("oldName原名："+file.getOriginalFilename());
@@ -145,19 +143,7 @@ public class SaveImgUnit {
         }
     }
 
-    private void fileImport(MultipartFile file, String subdirectory, String filename) {
-        FileImport fileImport = new FileImport();
-        fileImport.setOldName(file.getOriginalFilename());
-        fileImport.setNewName(filename);
-        fileImport.setVisitFileUrl(File.separator+subdirectory+ File.separator+filename);
-        fileImport.setCreateTm(GetTimeUtil.getNowTime());
-        //TODO 上传文件创建者,类型
-        //fileImport.setFileType("jpg");
-        //fileImport.setCreatUser();
-        fileImport.setValid(ValidAndStatusEumn.IS_VALID.getCode());
-        fileImport.setStatus(ValidAndStatusEumn.HAS_HANDLEED.getCode());
-        fileImportService.insertSelective(fileImport);
-    }
+   
 }
 
 
