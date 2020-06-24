@@ -1,0 +1,14 @@
+
+
+
+
+
+文件访问路径 www.yueyangcloud.cn:666/
+
+git 配置
+[remote "origin"]
+	url = https://github.com/2697249024/Webmyblogs.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "origin"]
+	url = https://gitee.com/foreverYue/Webmyblogs.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
