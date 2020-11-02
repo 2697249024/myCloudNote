@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.lyy.note.dao.FileImportMapper;
 import com.lyy.note.entity.pojo.FileImport;
-import com.lyy.note.eumns.ValidAndStatusEumn;
+import com.lyy.note.enums.ValidAndStatusEnum;
 import com.lyy.note.service.GoodsImgService;
 import com.lyy.note.util.GetServerRealPathUnit;
 import com.lyy.note.util.GetTimeUtil;
@@ -66,8 +66,8 @@ public class GoodsImgServiceImpl implements GoodsImgService {
         //TODO 上传文件创建者,类型
         //fileImport.setFileType("jpg");
         //fileImport.setCreatUser();
-        fileImport.setValid(ValidAndStatusEumn.IS_VALID.getCode());
-        fileImport.setStatus(ValidAndStatusEumn.HAS_HANDLEED.getCode());
+        fileImport.setValid(ValidAndStatusEnum.IS_VALID.getCode());
+        fileImport.setStatus(ValidAndStatusEnum.HAS_HANDLEED.getCode());
         fileImportMapper.insertSelective(fileImport);
     }
 

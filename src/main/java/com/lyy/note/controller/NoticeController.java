@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lyy.note.entity.Notice;
-import com.lyy.note.eumns.ResponseEumn;
+import com.lyy.note.enums.ResponseEnum;
 import com.lyy.note.service.NoticeService;
 import com.lyy.note.service.impl.NoticeServiceImpl;
 import com.lyy.note.vo.ResponseDTO;
@@ -44,10 +44,10 @@ public class NoticeController {
 		
 		Notice selectNoticeByType = noticeService.selectNoticeByType(type);
 		if(selectNoticeByType != null) {
-			return ResponseDTO.buildSuccessMsg(selectNoticeByType, ResponseEumn.SUCCESS.getDesc());
+			return ResponseDTO.buildSuccessMsg(selectNoticeByType, ResponseEnum.SUCCESS.getDesc());
 		}
 		//查询结果为null 返回错误
-		return ResponseDTO.buildFailure(ResponseEumn.ERROE.getDesc());
+		return ResponseDTO.buildFailure(ResponseEnum.ERROE.getDesc());
 	}
 	/***
 	 * 	第一次进入主页时会查询数据库 并将数据存入redis 设置过期时间5分钟
@@ -69,7 +69,7 @@ public class NoticeController {
 		if(!StringUtils.isEmpty(whetherFirstStop)) {
 			List<Notice> selectaAllNotice = (List<Notice>) redisTemplate.opsForValue().get("selectaAllNotice");
 			if(!StringUtils.isEmpty(selectaAllNotice)) {
-				return ResponseDTO.buildSuccessMsg(selectaAllNotice, ResponseEumn.SUCCESS.getDesc());
+				return ResponseDTO.buildSuccessMsg(selectaAllNotice, ResponseEnum.SUCCESS.getDesc());
 			}			
 			//为空说明redis数据为空
 			//重新查询数据库
@@ -79,7 +79,7 @@ public class NoticeController {
 				//将查询数据更新至redis数据库中
 				try {
 					redisTemplate.opsForValue().set("selectaAllNotice", selectaAllNotice,5, TimeUnit.MINUTES);
-					return ResponseDTO.buildSuccessMsg(selectaAllNotice, ResponseEumn.SUCCESS.getDesc());
+					return ResponseDTO.buildSuccessMsg(selectaAllNotice, ResponseEnum.SUCCESS.getDesc());
 				} catch (Exception e) {
 					log.error("selectaAllNotice----> redis异常",e.getMessage());
 				}
@@ -92,14 +92,14 @@ public class NoticeController {
 				//将查询数据更新至redis数据库中
 				try {
 					redisTemplate.opsForValue().set("selectaAllNotice", selectaAllNotice, 5, TimeUnit.MINUTES);
-					return ResponseDTO.buildSuccessMsg(selectaAllNotice, ResponseEumn.SUCCESS.getDesc());
+					return ResponseDTO.buildSuccessMsg(selectaAllNotice, ResponseEnum.SUCCESS.getDesc());
 				} catch (Exception e) {
 					log.error("selectaAllNotice----> redis异常",e);
 					return ResponseDTO.buildFailure("redis缓存异常");
 				}
 			}
 			//查询结果为null 返回错误
-			return ResponseDTO.buildFailure(ResponseEumn.ERROE.getDesc());
+			return ResponseDTO.buildFailure(ResponseEnum.ERROE.getDesc());
 			
 		}
 		

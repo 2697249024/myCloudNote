@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lyy.note.entity.User;
-import com.lyy.note.eumns.ResponseEumn;
+import com.lyy.note.enums.ResponseEnum;
 import com.lyy.note.service.UserService;
 import com.lyy.note.vo.PageQueryDTO;
 import com.lyy.note.vo.ResponseDTO;
@@ -31,11 +31,11 @@ public class UserController {
 		List<User> selectAllUser = userService.selectAllUser1();
 		//先判断是否为null
 		if (selectAllUser == null) {
-			return ResponseDTO.buildFailure(ResponseEumn.ERROE.getDesc());
+			return ResponseDTO.buildFailure(ResponseEnum.ERROE.getDesc());
 		}if(selectAllUser.isEmpty()) {
 			return ResponseDTO.buildFailure("未查询到任何数据");
 		}
-		return ResponseDTO.buildSuccessMsg(selectAllUser, ResponseEumn.SUCCESS.getDesc());
+		return ResponseDTO.buildSuccessMsg(selectAllUser, ResponseEnum.SUCCESS.getDesc());
 	}
 	
 	//分页查询

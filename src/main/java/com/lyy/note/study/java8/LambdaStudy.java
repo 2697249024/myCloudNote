@@ -1,34 +1,24 @@
 package com.lyy.note.study.java8;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.IntSummaryStatistics;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import org.apache.el.stream.Optional;
-
 import io.netty.util.Mapping;
+import org.springframework.beans.BeanUtils;
+
 
 public class LambdaStudy {
 	
 	
 	public static void main(String[] args) {
 
+		//BeanUtils.copyProperties("转换后的类", "要转换的类");
 
-		//List<Integer> intList = Arrays.asList(1,2,3);
+//		List<Integer> intList = Arrays.asList(1,2,3);
 //		//变成一倍
-//		List<Integer> collect = intList.stream().map(e ->
-//			e = e * e
-//
-//		).collect(Collectors.toList());
-		
-		//List<Integer> collect = intList.stream().map( e -> e * e ).collect(Collectors.toList());
-		
-		//collect.forEach(System.out::println);
+//		intList.stream().map(x -> x*x).forEach(System.out::println);
+
 		// 不使用lambda表达式为每个订单加上12%的税
 //		List<Integer> costBeforeTax = Arrays.asList(100, 200, 300, 400, 500);
 //		for (Integer cost : costBeforeTax) {
@@ -37,8 +27,7 @@ public class LambdaStudy {
 //		}
 //		System.out.println("-------");
 //		// 使用lambda表达式
-//		List<Double> collect = costBeforeTax.stream().map(p->p + .12*p).collect(Collectors.toList());
-//		collect.forEach(System.out::println);
+//		costBeforeTax.stream().map(x -> x+ .12*x).forEach(System.out::println);
 		
 		// 为每个订单加上12%的税 求税和
 		// 老方法：

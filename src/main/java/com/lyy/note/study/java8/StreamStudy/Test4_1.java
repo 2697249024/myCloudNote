@@ -37,8 +37,7 @@ public class Test4_1 {
 				new Dish("大虾", false, 300, Dish.Type.FISH),
 				new Dish("鲑鱼", false, 450, Dish.Type.FISH));
 		
-		//按类型筛选出热量最高的食
-		
+
 //Map<Type, Dish> collect = menu.stream().collect(groupingBy(Dish::getType,collectingAndThen(maxBy(Comparator.comparingInt(Dish::getCalories)), Optional::get)));
 //System.out.println("collect:"+collect);
 		

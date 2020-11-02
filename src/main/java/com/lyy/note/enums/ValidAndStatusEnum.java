@@ -1,9 +1,9 @@
-package com.lyy.note.eumns;
+package com.lyy.note.enums;
 
 /***
  * 状态与是否有效
  */
-public enum ValidAndStatusEumn {
+public enum ValidAndStatusEnum {
 
     /**是否有效:无效0*/
     NOT_VALID(0, "无效"),
@@ -36,7 +36,7 @@ public enum ValidAndStatusEumn {
     }
 
 
-    private ValidAndStatusEumn(Integer code, String desc) {
+    private ValidAndStatusEnum(Integer code, String desc) {
         this.code = code;
         this.desc = desc;
     }

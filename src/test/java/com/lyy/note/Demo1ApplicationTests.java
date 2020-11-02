@@ -7,6 +7,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.lyy.note.util.ChangeDateUtil;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class Demo1ApplicationTests {
@@ -56,6 +61,17 @@ public class Demo1ApplicationTests {
 		
 		
 	}
-	
+
+
+
+
+	public static void main(String[] args) {
+		List<String> a1 = Arrays.asList("55", "44", "66", "77");
+		List<String> a2 = Arrays.asList("44", "55", "66", "77");
+
+		boolean b = a1.containsAll(a2);
+
+		System.out.println(b);
+	}
 
 }
