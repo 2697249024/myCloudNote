@@ -1,4 +1,4 @@
-package com.lyy.note.study.java8.study;
+package com.lyy.note.study.java8.study.day01;
 
 import com.lyy.note.study.java8.study.day01.MyFun;
 import org.junit.jupiter.api.Test;
